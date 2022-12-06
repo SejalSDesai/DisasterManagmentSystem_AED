@@ -30,42 +30,42 @@ public class OrganizationDirectory {
         if (type.getValue().equals(Organization.Type.EventMaker.getValue())){
             
             organization = new EventMakerOrganization();
-            organization.setOrgName(name);
+            organization.setOrg_name(name);
             organizationList.add(organization);
         }
         else if (type.getValue().equals(Organization.Type.Victim.getValue())){
             organization = new VictimOrganization();
-            organization.setOrgName(name);
+            organization.setOrg_name(name);
             organizationList.add(organization);
         }
         else if (type.getValue().equals(Organization.Type.NGO.getValue())){
             organization = new NGOOrganization();
-            organization.setOrgName(name);
+            organization.setOrg_name(name);
             organizationList.add(organization);
         }
         else if (type.getValue().equals(Organization.Type.Provider.getValue())){
             organization = new ProviderOrganization(name);
-            organization.setOrgName(name);
+            organization.setOrg_name(name);
             organizationList.add(organization);
         }
         else if (type.getValue().equals(Organization.Type.Volunteer.getValue())){
             organization = new VolunteerOrganization(name);
-            organization.setOrgName(name);
+            organization.setOrg_name(name);
             organizationList.add(organization);
         }
         else if (type.getValue().equals(Organization.Type.Police.getValue())){
             organization = new PoliceOrganization(name);
-            organization.setOrgName(name);
+            organization.setOrg_name(name);
             organizationList.add(organization);
         }
         else if (type.getValue().equals(Organization.Type.Doctor.getValue())){
             organization = new DoctorOrganization();
-            organization.setOrgName(name);
+            organization.setOrg_name(name);
             organizationList.add(organization);
         }
         else if (type.getValue().equals(Organization.Type.FireMan.getValue())){
             organization = new FireManOrganization(name);
-            organization.setOrgName(name);
+            organization.setOrg_name(name);
             organizationList.add(organization);
         }
         

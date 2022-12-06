@@ -20,7 +20,7 @@ import java.util.HashSet;
 public abstract class Organization {
     
     private String name;
-    private String orgName;
+    private String org_name;
     private WorkQueue workQueue;
     private EmployeeDirectory employeeDirectory;
     private UserAccountDirectory userAccountDirectory;
@@ -59,12 +59,12 @@ public abstract class Organization {
       ++count;        
     }
 
-    public String getOrgName() {
-        return orgName;
+    public String getOrg_name() {
+        return org_name;
     }
 
-    public void setOrgName(String orgName) {
-        this.orgName = orgName;
+    public void setOrg_name(String org_name) {
+        this.org_name = org_name;
     }
     
     public abstract HashSet<Role> getSupportedRole();
