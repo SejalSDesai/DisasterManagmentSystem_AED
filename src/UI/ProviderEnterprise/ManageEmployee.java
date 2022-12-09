@@ -36,10 +36,10 @@ public class ManageEmployee extends javax.swing.JPanel {
         
         model.setRowCount(0);
         
-        for (Employee employee : organization.getEmployeeDirectory().getEmployeeList()){
+        for (Employee employee : organization.getEmployeeDirectory().getEmplist()){
             Object[] row = new Object[5];
             row[0] = employee;
-            row[2] = employee.getId();
+            row[2] = employee.getempId();
             row[1] = organization.getOrgName();
             model.addRow(row);
         }
