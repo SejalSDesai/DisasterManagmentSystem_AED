@@ -104,6 +104,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
         comboRole = new javax.swing.JComboBox();
         jButton1 = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(204, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel3.setBackground(new java.awt.Color(0, 153, 153));
