@@ -4,6 +4,14 @@
  */
 package UI.ProviderManager;
 
+import Business.Employee.Employee;
+import Business.Organization.Organization;
+import Business.Organization.OrganizationDirectory;
+import java.awt.CardLayout;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author wadhwa
@@ -11,10 +19,47 @@ package UI.ProviderManager;
 public class ManageEmployee extends javax.swing.JPanel {
 
     /**
-     * Creates new form ManageEmployee
+     * Creates new form ManageEnterprise
      */
-    public ManageEmployee() {
-        initComponents();
+    private OrganizationDirectory orgdirectory;
+    private JPanel userProcessContainer;
+    public ManageEmployee(JPanel userProcessContainer,OrganizationDirectory orgdirectory) {
+        initComponents();   
+        this.userProcessContainer=userProcessContainer;
+        this.orgdirectory=orgdirectory;
+        populateComboOrganization();
+        populateComboOrganizationEmp();
+    }
+    //populate provider manager employee table by adding employees
+    private void populateTbl(Organization organization){
+        DefaultTableModel model = (DefaultTableModel) tblEmp.getModel();
+        
+        model.setRowCount(0);
+        
+        for (Employee employee : organization.getEmployeeDirectory().getEmplist()){
+            Object[] row = new Object[5];
+            row[0] = employee;
+            row[2] = employee.getempId();
+            row[1] = organization.getName();
+            model.addRow(row);
+        }
+    }
+    //populate organization combo box
+    public void populateComboOrganization(){
+        comboOrg.removeAllItems();
+        
+        for (Organization organization : orgdirectory.getOrganizationList()){
+            comboOrg.addItem(organization);
+        }
+    }
+    
+     //populate employee - provider manager organization combo box
+    public void populateComboOrganizationEmp(){
+        comboOrgSelect.removeAllItems();
+
+        for (Organization organization : orgdirectory.getOrganizationList()){
+            comboOrgSelect.addItem(organization);
+        }
     }
 
     /**
