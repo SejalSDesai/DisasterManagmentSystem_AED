@@ -31,7 +31,7 @@ public class ManageEnterpriseAdmin extends javax.swing.JPanel {
      */
     private JPanel panelWorkArea;
     private Ecosystem system;
-    public ManageEnterpriseAdmin() {
+    public ManageEnterpriseAdmin(JPanel userProcessContainer,Ecosystem system) {
         initComponents();
         this.panelWorkArea=userProcessContainer;
         this.system=system;

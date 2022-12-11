@@ -19,7 +19,7 @@ public class SystemAdminWorkArea extends javax.swing.JPanel {
     private Ecosystem system;
     private JPanel panelWorkArea;
     
-    public SystemAdminWorkArea() {
+    public SystemAdminWorkArea(JPanel userProcessContainer,Ecosystem system) {
         initComponents();
         this.panelWorkArea=userProcessContainer;
         this.system=system;
@@ -194,7 +194,7 @@ public class SystemAdminWorkArea extends javax.swing.JPanel {
 
     private void btnEnterpriseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnterpriseActionPerformed
         // TODO add your handling code here:
-        ManageEnterprise sysEnt = new ManageEnterprise(panelWorkArea,system);
+        ManageEnterprise sysEnt = new ManageEnterprise(panelWorkArea, system);
         panelWorkArea.add("ManageEnterprise", sysEnt);
         CardLayout layout= (CardLayout) panelWorkArea.getLayout();
         layout.next(panelWorkArea);

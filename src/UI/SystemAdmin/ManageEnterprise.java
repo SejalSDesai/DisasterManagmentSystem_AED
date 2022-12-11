@@ -17,15 +17,15 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author sej
  */
-public class ManagerEnterprise extends javax.swing.JPanel {
+public class ManageEnterprise extends javax.swing.JPanel {
 
     /**
-     * Creates new form ManagerEnterprise
+     * Creates new form ManageEnterprise
      */
     private JPanel panelWorkArea;
     private Ecosystem system;
     
-    public ManagerEnterprise(JPanel userProcessContainer,Ecosystem system) {
+    public ManageEnterprise(JPanel userProcessContainer,Ecosystem system) {
         initComponents();
         this.panelWorkArea=userProcessContainer;
         this.system=system;
@@ -219,8 +219,6 @@ public class ManagerEnterprise extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblEnterprise);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 560, 617, 302));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/sej/Downloads/ezgif.com-gif-maker-9.gif")); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 240, -1, -1));
 
         jButton1.setIcon(new javax.swing.ImageIcon("/Users/sej/Downloads/ezgif.com-gif-maker-3.png")); // NOI18N
