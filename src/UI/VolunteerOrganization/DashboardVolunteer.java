@@ -23,7 +23,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author sej
+ * @author ruchi
  */
 public class DashboardVolunteer extends javax.swing.JPanel {
 
