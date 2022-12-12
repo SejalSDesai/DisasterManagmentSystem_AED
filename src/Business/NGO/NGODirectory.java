@@ -35,3 +35,5 @@ public class NGODirectory {
         ngodirectory.remove(ngo);   
     
 }
+}
+

@@ -28,7 +28,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
      */
      private JPanel userProcessContainer;
     private Enterprise enterprise;
-    public ManageUserAccount() {
+    public ManageUserAccount(JPanel userProcessContainer,Enterprise enterprise) {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.enterprise=enterprise;

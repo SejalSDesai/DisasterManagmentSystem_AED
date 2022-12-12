@@ -40,7 +40,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
      public void populateComboOrganization() {
         comboOrg.removeAllItems();
 
-        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
+        for (Organization organization : enterprise.getOrganization_directory().getOrganizationList()) {
             if(organization instanceof VictimOrganization)
             comboOrg.addItem(organization);
             
@@ -50,7 +50,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
     public void populateComboEmployee(Organization organization){
         comboEmp.removeAllItems();
         
-        for (Employee employee : organization.getEmployeeDirectory().getEmployeeList()){
+        for (Employee employee : organization.getEmployeeDirectory().getEmplist()){
             comboEmp.addItem(employee);
         }
     }
@@ -60,9 +60,23 @@ public class ManageUserAccount extends javax.swing.JPanel {
         Organization organization = (Organization) comboOrg.getSelectedItem();
         if(organization instanceof VictimOrganization){
             comboRole.addItem(new VictimRole());
-        
         }
-      
+        }
+      public void populateData() {
+
+        DefaultTableModel model = (DefaultTableModel) tblUser.getModel();
+
+        model.setRowCount(0);
+
+        for (Organization organization : enterprise.getOrganization_directory().getOrganizationList()) {
+            for (UserAccount ua : organization.getUserAccountDirectory().getUserAccountList()) {
+                Object row[] = new Object[2];
+                row[0] = ua;
+                row[1] = ua.getRole();
+                ((DefaultTableModel) tblUser.getModel()).addRow(row);
+            }
+        }
+    
     }
 
     /**
@@ -107,7 +121,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(79, 79, 79)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 755, Short.MAX_VALUE)
                 .addGap(86, 86, 86))
         );
         jPanel3Layout.setVerticalGroup(
@@ -223,7 +237,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
                 .addGap(25, 25, 25))
         );
 
-        add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 144, -1, -1));
+        add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 144, 570, -1));
 
         tblUser.setBackground(new java.awt.Color(204, 204, 204));
         tblUser.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -245,21 +259,21 @@ public class ManageUserAccount extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblUser);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(633, 157, 498, 448));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 210, 470, 350));
 
-        jButton1.setIcon(new javax.swing.ImageIcon("/Users/sej/Downloads/ezgif.com-gif-maker-3.png")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/ezgif.com-gif-maker-3.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 20, 60, 60));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 20, 60, 60));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddUserActionPerformed
         // TODO add your handling code here:
         if(txtName.getText().isEmpty()|| txtPassword.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null,"Please fill the Empty fields");
+            JOptionPane.showMessageDialog(null,"you have not filled the field ");
         }else{
             String userName = txtName.getText();
             String password = txtPassword.getText();
@@ -271,9 +285,9 @@ public class ManageUserAccount extends javax.swing.JPanel {
                 if (organization instanceof VictimOrganization){
                     Victim vm = new Victim();
 
-                    vm.setName(employee.getName());
+                    vm.setName(employee.getempName());
 
-                    ((VictimOrganization) organization).getChangeseekerlist().getChangeSeekerDirectory().add(vm);
+                    ((VictimOrganization) organization).getChangeseekerlist().getVictimDirectory().add(vm);
 
                 }
                 organization.getUserAccountDirectory().createUserAccount(userName, password, employee, role);

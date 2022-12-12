@@ -153,15 +153,17 @@ public class NGOManagerWorkArea extends javax.swing.JPanel {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1895, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(1136, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(0, 0, 0))
+                .addContainerGap())
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -186,7 +188,7 @@ public class NGOManagerWorkArea extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblNgoEvents);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 920, 139));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 920, 139));
 
         btnAssign.setBackground(new java.awt.Color(0, 0, 0));
         btnAssign.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -197,7 +199,7 @@ public class NGOManagerWorkArea extends javax.swing.JPanel {
                 btnAssignActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 200, 45));
+        jPanel1.add(btnAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 200, 45));
 
         btnComplete.setBackground(new java.awt.Color(0, 0, 0));
         btnComplete.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -208,7 +210,7 @@ public class NGOManagerWorkArea extends javax.swing.JPanel {
                 btnCompleteActionPerformed(evt);
             }
         });
-        jPanel1.add(btnComplete, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 260, 200, 45));
+        jPanel1.add(btnComplete, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 240, 200, 45));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel9.setText("Pending Requests");
@@ -235,7 +237,7 @@ public class NGOManagerWorkArea extends javax.swing.JPanel {
         tblRequests.setOpaque(false);
         jScrollPane3.setViewportView(tblRequests);
 
-        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 107, 1043, 119));
+        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 107, 910, 119));
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Create event", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 24))); // NOI18N
         jPanel3.setOpaque(false);
@@ -344,7 +346,7 @@ public class NGOManagerWorkArea extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 580, -1, -1));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, -1, -1));
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Request", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 24))); // NOI18N
         jPanel4.setOpaque(false);
@@ -363,20 +365,20 @@ public class NGOManagerWorkArea extends javax.swing.JPanel {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(78, 78, 78)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addGap(18, 18, 18))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(60, 60, 60)
+                .addGap(25, 25, 25)
                 .addComponent(btnRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 390, -1, -1));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 300, 220, 140));
 
         btnAnalysis.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnAnalysis.setIcon(new javax.swing.ImageIcon("/Users/sej/Downloads/ezgif.com-gif-maker-6.png")); // NOI18N
@@ -389,17 +391,15 @@ public class NGOManagerWorkArea extends javax.swing.JPanel {
                 btnAnalysisActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAnalysis, new org.netbeans.lib.awtextra.AbsoluteConstraints(1075, 107, -1, 116));
+        jPanel1.add(btnAnalysis, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 100, 250, 116));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1394, Short.MAX_VALUE)
+            .addGap(0, 1194, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1394, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1194, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

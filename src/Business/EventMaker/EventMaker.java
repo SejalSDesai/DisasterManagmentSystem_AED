@@ -4,6 +4,8 @@
  */
 package Business.EventMaker;
 
+import Business.WorkQueue.WorkQueue;
+
 /**
  *
  * @author sej

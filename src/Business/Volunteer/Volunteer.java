@@ -4,6 +4,8 @@
  */
 package Business.Volunteer;
 
+import Business.WorkQueue.WorkQueue;
+
 /**
  *
  * @author sej

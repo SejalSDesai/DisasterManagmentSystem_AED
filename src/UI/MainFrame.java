@@ -5,10 +5,11 @@
 package UI;
 import Business.Ecosystem;
 import Business.DB40Util.DB4OUtil;
-import Business.Enterprise.Enterprise;
-import Business.Network.Network;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
+import Business.Enterprise.Enterprise;
+import Business.Network.Network;
+
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 
@@ -44,10 +45,10 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        txtUsername = new javax.swing.JTextField();
-        btnLogout = new javax.swing.JButton();
-        btnLogin = new javax.swing.JButton();
-        txtPassword = new javax.swing.JPasswordField();
+        Username = new javax.swing.JTextField();
+        logoutbtn = new javax.swing.JButton();
+        loginbtn = new javax.swing.JButton();
+        Password = new javax.swing.JPasswordField();
         jLabel5 = new javax.swing.JLabel();
         panelWorkArea = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -64,29 +65,29 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Adelle Sans Devanagari", 1, 18)); // NOI18N
         jLabel2.setText("Password");
 
-        txtUsername.setBackground(new java.awt.Color(102, 102, 102));
+        Username.setBackground(new java.awt.Color(102, 102, 102));
 
-        btnLogout.setBackground(new java.awt.Color(102, 102, 102));
-        btnLogout.setFont(new java.awt.Font("Adelle Sans Devanagari", 1, 14)); // NOI18N
-        btnLogout.setForeground(new java.awt.Color(255, 255, 255));
-        btnLogout.setText("Logout");
-        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+        logoutbtn.setBackground(new java.awt.Color(102, 102, 102));
+        logoutbtn.setFont(new java.awt.Font("Adelle Sans Devanagari", 1, 14)); // NOI18N
+        logoutbtn.setForeground(new java.awt.Color(255, 255, 255));
+        logoutbtn.setText("Logout");
+        logoutbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLogoutActionPerformed(evt);
+                logoutbtnActionPerformed(evt);
             }
         });
 
-        btnLogin.setBackground(new java.awt.Color(102, 102, 102));
-        btnLogin.setFont(new java.awt.Font("Adelle Sans Devanagari", 1, 14)); // NOI18N
-        btnLogin.setForeground(new java.awt.Color(255, 255, 255));
-        btnLogin.setText("Login");
-        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+        loginbtn.setBackground(new java.awt.Color(102, 102, 102));
+        loginbtn.setFont(new java.awt.Font("Adelle Sans Devanagari", 1, 14)); // NOI18N
+        loginbtn.setForeground(new java.awt.Color(255, 255, 255));
+        loginbtn.setText("Login");
+        loginbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLoginActionPerformed(evt);
+                loginbtnActionPerformed(evt);
             }
         });
 
-        txtPassword.setBackground(new java.awt.Color(102, 102, 102));
+        Password.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/login2.gif"))); // NOI18N
 
@@ -101,16 +102,16 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
-                    .addComponent(txtUsername))
+                    .addComponent(Password, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
+                    .addComponent(Username))
                 .addGap(90, 90, 90))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(121, 121, 121)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
-                            .addComponent(btnLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(logoutbtn, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
+                            .addComponent(loginbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(65, 65, 65)
                         .addComponent(jLabel5)))
@@ -124,15 +125,15 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(33, 33, 33)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(52, 52, 52)
-                .addComponent(btnLogin)
+                .addComponent(loginbtn)
                 .addGap(37, 37, 37)
-                .addComponent(btnLogout)
+                .addComponent(logoutbtn)
                 .addContainerGap())
         );
 
@@ -207,14 +208,14 @@ public class MainFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
-        btnLogout.setEnabled(false);
-        btnLogin.setEnabled(true);
-        txtUsername.setEnabled(true);
-        txtPassword.setEnabled(true);
+    private void logoutbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutbtnActionPerformed
+        logoutbtn.setEnabled(false);
+        loginbtn.setEnabled(true);
+        Username.setEnabled(true);
+        Password.setEnabled(true);
 
-        txtUsername.setText("");
-        txtPassword.setText("");
+        Username.setText("");
+        Password.setText("");
 
         panelWorkArea.removeAll();
         logout_panel blankJP= new logout_panel();
@@ -222,26 +223,26 @@ public class MainFrame extends javax.swing.JFrame {
         CardLayout crdLyt=(CardLayout)panelWorkArea.getLayout();
         crdLyt.next(panelWorkArea);
         db4oUtil.storeSystem(ecosystem);        // TODO add your handling code here:
-    }//GEN-LAST:event_btnLogoutActionPerformed
+    }//GEN-LAST:event_logoutbtnActionPerformed
 
-    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        String userName=txtUsername.getText();
-        char[] passCharArray= txtPassword.getPassword();
+    private void loginbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginbtnActionPerformed
+        String userName=Username.getText();
+        char[] passCharArray= Password.getPassword();
         String password= String.valueOf(passCharArray);
 
-        //Step 1: Check user account directory in the system if the user exists
+        //Step 1: To see if the user is present, check the system's user account direct
         UserAccount useraccount=ecosystem.getUserAccountDirectory().authenticateUser(userName, password);
         Enterprise inEnterprise=null;
         Organization inOrganization=null;
 
         if(useraccount==null){
-            //Step 2: Check each enterprise
+            //Step 2:Checking of enterprise 
             for(Network network:ecosystem.getNetworkList()){
                 //Step 2-a: Check inside network against each enterprise
                 for(Enterprise enterprise: network.getEnterpriseDirectory().getEnterprise_list()){
                     useraccount=enterprise.getUserAccountDirectory().authenticateUser(userName, password);
                     if(useraccount==null){
-                        //Step 3: Under the enterprise check each organization
+                        //Step 3: Check the network for each enterprise
                         for(Organization organization:enterprise.getOrganization_directory().getOrganizationList()){
                             useraccount=organization.getUserAccountDirectory().authenticateUser(userName, password);
 
@@ -274,11 +275,11 @@ public class MainFrame extends javax.swing.JFrame {
             panelWorkArea.add("workArea",useraccount.getRole().createWorkArea(panelWorkArea, useraccount, inOrganization, inEnterprise, ecosystem));
             layout.next(panelWorkArea);
         }
-        btnLogin.setEnabled(false);
-        btnLogout.setEnabled(true);
-        txtUsername.setEnabled(false);
-        txtPassword.setEnabled(false);  // TODO add your handling code here:
-    }//GEN-LAST:event_btnLoginActionPerformed
+        loginbtn.setEnabled(false);
+        logoutbtn.setEnabled(true);
+        Username.setEnabled(false);
+        Password.setEnabled(false);  // TODO add your handling code here:
+    }//GEN-LAST:event_loginbtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -319,8 +320,8 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnLogin;
-    private javax.swing.JButton btnLogout;
+    private javax.swing.JPasswordField Password;
+    private javax.swing.JTextField Username;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -329,9 +330,9 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSplitPane jSplitPane1;
+    private javax.swing.JButton loginbtn;
+    private javax.swing.JButton logoutbtn;
     private javax.swing.JPanel panelWorkArea;
     private javax.swing.JPanel sidePane;
-    private javax.swing.JPasswordField txtPassword;
-    private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
 }

@@ -56,7 +56,7 @@ public class DoctorWorkArea extends javax.swing.JPanel {
                    
                
             Object[] row = new Object[10];
-            row[0] = work.getSender().getEmployee().getName();
+            row[0] = work.getSender().getEmployee().getempName();
             row[1] = work.getSubject();
             row[2] = ((VictimWorkRequest) work).getDescription();
             row[3] = ((VictimWorkRequest) work).getLocation();
