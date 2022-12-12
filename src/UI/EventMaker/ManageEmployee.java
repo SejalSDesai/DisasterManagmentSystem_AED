@@ -89,10 +89,9 @@ public void displayCombo(){
         setBackground(new java.awt.Color(204, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel3.setBackground(new java.awt.Color(0, 153, 204));
+        jPanel3.setBackground(new java.awt.Color(0, 102, 102));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Manage Employee");
 
@@ -152,7 +151,7 @@ public void displayCombo(){
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(nametxt)
                     .addComponent(comboOrgSelect, 0, 245, Short.MAX_VALUE))
@@ -160,7 +159,7 @@ public void displayCombo(){
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(171, 171, 171)
                 .addComponent(empadd, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -200,11 +199,11 @@ public void displayCombo(){
         });
         jScrollPane1.setViewportView(tblEmp);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 240, 505, 324));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 260, 505, 324));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
         jLabel5.setText("Organization");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 160, 191, 45));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 200, 191, 45));
 
         comboOrg.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         comboOrg.setForeground(new java.awt.Color(153, 0, 153));
@@ -213,7 +212,7 @@ public void displayCombo(){
                 comboOrgActionPerformed(evt);
             }
         });
-        add(comboOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 160, 245, 45));
+        add(comboOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 210, 245, 45));
 
         jButton1.setBackground(new java.awt.Color(102, 102, 102));
         jButton1.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
@@ -224,7 +223,7 @@ public void displayCombo(){
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1250, 20, 50, 50));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 80, 50, 50));
     }// </editor-fold>//GEN-END:initComponents
 
     private void empaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empaddActionPerformed
@@ -265,6 +264,9 @@ public void displayCombo(){
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

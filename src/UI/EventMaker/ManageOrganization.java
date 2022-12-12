@@ -196,7 +196,7 @@ public class ManageOrganization extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 20, 50, 50));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 20, 50, 50));
     }// </editor-fold>//GEN-END:initComponents
 
     private void addbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addbtnActionPerformed
