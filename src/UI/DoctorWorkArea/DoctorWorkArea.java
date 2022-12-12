@@ -141,7 +141,7 @@ public class DoctorWorkArea extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblRequests);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 159, 1356, 206));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 1180, 206));
 
         ackbtn.setBackground(new java.awt.Color(102, 102, 102));
         ackbtn.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -166,7 +166,7 @@ public class DoctorWorkArea extends javax.swing.JPanel {
         add(resbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 527, 245, 58));
 
         jLabel3.setIcon(new javax.swing.ImageIcon("/Users/sej/Downloads/ezgif.com-gif-maker-5.gif")); // NOI18N
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(486, 414, -1, 301));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 390, -1, 301));
     }// </editor-fold>//GEN-END:initComponents
 
     private void ackbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ackbtnActionPerformed

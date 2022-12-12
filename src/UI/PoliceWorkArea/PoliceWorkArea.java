@@ -80,8 +80,8 @@ public class PoliceWorkArea extends javax.swing.JPanel {
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        btnAssign = new javax.swing.JButton();
-        btnComplete = new javax.swing.JButton();
+        ackbtn = new javax.swing.JButton();
+        resbtn = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblRequests = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
@@ -113,25 +113,25 @@ public class PoliceWorkArea extends javax.swing.JPanel {
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, -1, -1));
 
-        btnAssign.setBackground(new java.awt.Color(153, 153, 153));
-        btnAssign.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        btnAssign.setText("Acknowledge");
-        btnAssign.addActionListener(new java.awt.event.ActionListener() {
+        ackbtn.setBackground(new java.awt.Color(153, 153, 153));
+        ackbtn.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        ackbtn.setText("Acknowledge");
+        ackbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAssignActionPerformed(evt);
+                ackbtnActionPerformed(evt);
             }
         });
-        jPanel2.add(btnAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(545, 384, 245, 58));
+        jPanel2.add(ackbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, 245, 58));
 
-        btnComplete.setBackground(new java.awt.Color(153, 153, 153));
-        btnComplete.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        btnComplete.setText("Responded");
-        btnComplete.addActionListener(new java.awt.event.ActionListener() {
+        resbtn.setBackground(new java.awt.Color(153, 153, 153));
+        resbtn.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        resbtn.setText("Responded");
+        resbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCompleteActionPerformed(evt);
+                resbtnActionPerformed(evt);
             }
         });
-        jPanel2.add(btnComplete, new org.netbeans.lib.awtextra.AbsoluteConstraints(831, 384, 245, 58));
+        jPanel2.add(resbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 380, 245, 58));
 
         tblRequests.setBackground(new java.awt.Color(204, 204, 204));
         tblRequests.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -153,19 +153,21 @@ public class PoliceWorkArea extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblRequests);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 194, 1419, 172));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 1140, 172));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel2.setText("You're logged in as Police.");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 133, 504, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 130, 504, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1568, Short.MAX_VALUE)
+            .addGap(0, 1165, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -175,7 +177,7 @@ public class PoliceWorkArea extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignActionPerformed
+    private void ackbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ackbtnActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblRequests.getSelectedRow();
         if (selectedRow < 0) {
@@ -193,9 +195,9 @@ public class PoliceWorkArea extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "Wrong Request", "Warning", JOptionPane.WARNING_MESSAGE);
             }
         }
-    }//GEN-LAST:event_btnAssignActionPerformed
+    }//GEN-LAST:event_ackbtnActionPerformed
 
-    private void btnCompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompleteActionPerformed
+    private void resbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resbtnActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblRequests.getSelectedRow();
         if (selectedRow < 0) {
@@ -213,17 +215,17 @@ public class PoliceWorkArea extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "Wrong Request", "Warning", JOptionPane.WARNING_MESSAGE);
             }
         }
-    }//GEN-LAST:event_btnCompleteActionPerformed
+    }//GEN-LAST:event_resbtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAssign;
-    private javax.swing.JButton btnComplete;
+    private javax.swing.JButton ackbtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton resbtn;
     private javax.swing.JTable tblRequests;
     // End of variables declaration//GEN-END:variables
 }

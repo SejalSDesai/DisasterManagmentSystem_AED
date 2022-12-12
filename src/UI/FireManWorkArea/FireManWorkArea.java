@@ -99,19 +99,19 @@ public class FireManWorkArea extends javax.swing.JPanel {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
         );
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 24, 1673, -1));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 24, 1160, -1));
 
-        ackbtn.setBackground(new java.awt.Color(153, 153, 153));
+        ackbtn.setBackground(new java.awt.Color(102, 102, 102));
         ackbtn.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         ackbtn.setForeground(new java.awt.Color(255, 255, 255));
         ackbtn.setText("Acknowledge");
@@ -120,9 +120,9 @@ public class FireManWorkArea extends javax.swing.JPanel {
                 ackbtnActionPerformed(evt);
             }
         });
-        jPanel2.add(ackbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 438, 245, 58));
+        jPanel2.add(ackbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 400, 245, 58));
 
-        resbtn.setBackground(new java.awt.Color(153, 153, 153));
+        resbtn.setBackground(new java.awt.Color(102, 102, 102));
         resbtn.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         resbtn.setForeground(new java.awt.Color(255, 255, 255));
         resbtn.setText("Responded");
@@ -131,7 +131,7 @@ public class FireManWorkArea extends javax.swing.JPanel {
                 resbtnActionPerformed(evt);
             }
         });
-        jPanel2.add(resbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 438, 245, 58));
+        jPanel2.add(resbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 400, 245, 58));
 
         tblRequests.setBackground(new java.awt.Color(204, 204, 204));
         tblRequests.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -153,13 +153,15 @@ public class FireManWorkArea extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblRequests);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 134, 1417, 172));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 1140, 172));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 6, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
