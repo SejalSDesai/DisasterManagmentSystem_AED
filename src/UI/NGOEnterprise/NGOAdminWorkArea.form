@@ -133,9 +133,9 @@
                       </Group>
                       <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnManageOrganization" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
-                          <Component id="btnManageUserAccount" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
-                          <Component id="btnManageEmployee" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
+                          <Component id="ngoorg" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
+                          <Component id="ngouser" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
+                          <Component id="ngoemp" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
                   </Group>
@@ -146,17 +146,17 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnManageOrganization" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="ngoorg" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
                           <Component id="jLabel5" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="jLabel3" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
-                          <Component id="btnManageEmployee" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="ngoemp" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnManageUserAccount" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="ngouser" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
                           <Component id="jLabel4" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
@@ -167,7 +167,7 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel3">
             </Component>
-            <Component class="javax.swing.JButton" name="btnManageEmployee">
+            <Component class="javax.swing.JButton" name="ngoemp">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="66" green="66" red="66" type="rgb"/>
@@ -181,10 +181,10 @@
                 <Property name="text" type="java.lang.String" value=" Employee"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageEmployeeActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ngoempActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="btnManageUserAccount">
+            <Component class="javax.swing.JButton" name="ngouser">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="66" green="66" red="66" type="rgb"/>
@@ -198,12 +198,12 @@
                 <Property name="text" type="java.lang.String" value=" User Account"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageUserAccountActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ngouserActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
             </Component>
-            <Component class="javax.swing.JButton" name="btnManageOrganization">
+            <Component class="javax.swing.JButton" name="ngoorg">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="66" green="66" red="66" type="rgb"/>
@@ -217,7 +217,7 @@
                 <Property name="text" type="java.lang.String" value="Organization"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageOrganizationActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ngoorgActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel5">

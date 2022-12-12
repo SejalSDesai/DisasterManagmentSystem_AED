@@ -31,10 +31,10 @@ public class ManageUserAccount extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.enterprise=enterprise;
-        populateComboOrganization();
-        populateData();
+        displayCombo();
+        selectCombo();
     }
-    public void populateComboOrganization() {
+    public void displayCombo() {
         comboOrg.removeAllItems();
 
         for (Organization organization : enterprise.getOrganization_directory().getOrganizationList()) {
@@ -59,7 +59,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
       
     }
     //populate username and roles in table
-    public void populateData() {
+    public void selectCombo() {
 
         DefaultTableModel model = (DefaultTableModel) tblUser.getModel();
 
@@ -90,12 +90,12 @@ public class ManageUserAccount extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblUser = new javax.swing.JTable();
         jPanel4 = new javax.swing.JPanel();
-        btnAddUser = new javax.swing.JButton();
+        addbtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        txtName = new javax.swing.JTextField();
+        uname = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         comboOrg = new javax.swing.JComboBox();
-        txtPassword = new javax.swing.JPasswordField();
+        pword = new javax.swing.JPasswordField();
         lblPassword = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         comboEmp = new javax.swing.JComboBox();
@@ -156,21 +156,21 @@ public class ManageUserAccount extends javax.swing.JPanel {
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Manage", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 24))); // NOI18N
         jPanel4.setOpaque(false);
 
-        btnAddUser.setBackground(new java.awt.Color(102, 102, 102));
-        btnAddUser.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnAddUser.setForeground(new java.awt.Color(255, 255, 255));
-        btnAddUser.setText("Add User");
-        btnAddUser.addActionListener(new java.awt.event.ActionListener() {
+        addbtn.setBackground(new java.awt.Color(102, 102, 102));
+        addbtn.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        addbtn.setForeground(new java.awt.Color(255, 255, 255));
+        addbtn.setText("Add User");
+        addbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddUserActionPerformed(evt);
+                addbtnActionPerformed(evt);
             }
         });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel2.setText("Username");
 
-        txtName.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtName.setForeground(new java.awt.Color(153, 0, 153));
+        uname.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        uname.setForeground(new java.awt.Color(153, 0, 153));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel3.setText("Organization");
@@ -182,7 +182,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
             }
         });
 
-        txtPassword.setForeground(new java.awt.Color(153, 0, 153));
+        pword.setForeground(new java.awt.Color(153, 0, 153));
 
         lblPassword.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         lblPassword.setText("Password");
@@ -213,17 +213,17 @@ public class ManageUserAccount extends javax.swing.JPanel {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pword, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(comboEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(comboRole, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(uname, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(comboOrg, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnAddUser, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(addbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(223, 223, 223))
         );
         jPanel4Layout.setVerticalGroup(
@@ -247,13 +247,13 @@ public class ManageUserAccount extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(uname, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pword, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
-                .addComponent(btnAddUser, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(addbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -290,28 +290,28 @@ public class ManageUserAccount extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAddUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddUserActionPerformed
+    private void addbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addbtnActionPerformed
         // TODO add your handling code here:
-        if(txtName.getText().isEmpty()|| txtPassword.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null,"Please fill the Empty fields");
+        if(uname.getText().isEmpty()|| pword.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null,"FIELD CANNOT BE EMPTY");
         }else{
-            String userName = txtName.getText();
-            String password = txtPassword.getText();
+            String userName = uname.getText();
+            String password = pword.getText();
             if(Ecosystem.checkIfUsernameIsUnique(userName)){
                 Organization organization = (Organization) comboOrg.getSelectedItem();
                 Employee employee = (Employee) comboEmp.getSelectedItem();
                 Role role = (Role) comboRole.getSelectedItem();
 
                 organization.getUserAccountDirectory().createUserAccount(userName, password, employee, role);
-                populateData();
-                txtName.setText("");
-                txtPassword.setText("");
+                selectCombo();
+                uname.setText("");
+                pword.setText("");
             }
             else{
-                JOptionPane.showMessageDialog(null, "Username must be unique", "Warning", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Enter unique username", "Warning", JOptionPane.WARNING_MESSAGE);
             }
         }
-    }//GEN-LAST:event_btnAddUserActionPerformed
+    }//GEN-LAST:event_addbtnActionPerformed
 
     private void comboOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboOrgActionPerformed
         // TODO add your handling code here:
@@ -331,7 +331,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAddUser;
+    private javax.swing.JButton addbtn;
     private javax.swing.JButton btnBack;
     private javax.swing.JComboBox comboEmp;
     private javax.swing.JComboBox comboOrg;
@@ -347,8 +347,8 @@ public class ManageUserAccount extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblPassword;
+    private javax.swing.JPasswordField pword;
     private javax.swing.JTable tblUser;
-    private javax.swing.JTextField txtName;
-    private javax.swing.JPasswordField txtPassword;
+    private javax.swing.JTextField uname;
     // End of variables declaration//GEN-END:variables
 }

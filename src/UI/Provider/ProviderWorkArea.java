@@ -104,17 +104,17 @@ public class ProviderWorkArea extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblProvideReq = new javax.swing.JTable();
-        btnComplete = new javax.swing.JButton();
-        btnAssign = new javax.swing.JButton();
+        combtn = new javax.swing.JButton();
+        assignbtn = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblCreate = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        txtReq = new javax.swing.JTextField();
+        reqtxt = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        txtQuantity = new javax.swing.JTextField();
-        btnCreate = new javax.swing.JButton();
+        quantxt = new javax.swing.JTextField();
+        createbtn = new javax.swing.JButton();
         comboType = new javax.swing.JComboBox();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -144,23 +144,23 @@ public class ProviderWorkArea extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblProvideReq);
 
-        btnComplete.setBackground(new java.awt.Color(0, 0, 0));
-        btnComplete.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnComplete.setForeground(new java.awt.Color(255, 255, 255));
-        btnComplete.setText("Complete");
-        btnComplete.addActionListener(new java.awt.event.ActionListener() {
+        combtn.setBackground(new java.awt.Color(0, 0, 0));
+        combtn.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        combtn.setForeground(new java.awt.Color(255, 255, 255));
+        combtn.setText("Complete");
+        combtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCompleteActionPerformed(evt);
+                combtnActionPerformed(evt);
             }
         });
 
-        btnAssign.setBackground(new java.awt.Color(0, 0, 0));
-        btnAssign.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnAssign.setForeground(new java.awt.Color(255, 255, 255));
-        btnAssign.setText("Assign");
-        btnAssign.addActionListener(new java.awt.event.ActionListener() {
+        assignbtn.setBackground(new java.awt.Color(0, 0, 0));
+        assignbtn.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        assignbtn.setForeground(new java.awt.Color(255, 255, 255));
+        assignbtn.setText("Assign");
+        assignbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAssignActionPerformed(evt);
+                assignbtnActionPerformed(evt);
             }
         });
 
@@ -191,11 +191,11 @@ public class ProviderWorkArea extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         jLabel4.setText("Type");
 
-        txtReq.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        txtReq.setForeground(new java.awt.Color(153, 0, 153));
-        txtReq.addKeyListener(new java.awt.event.KeyAdapter() {
+        reqtxt.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        reqtxt.setForeground(new java.awt.Color(153, 0, 153));
+        reqtxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtReqKeyTyped(evt);
+                reqtxtKeyTyped(evt);
             }
         });
 
@@ -205,21 +205,21 @@ public class ProviderWorkArea extends javax.swing.JPanel {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         jLabel3.setText("Quantity");
 
-        txtQuantity.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        txtQuantity.setForeground(new java.awt.Color(153, 0, 153));
-        txtQuantity.addKeyListener(new java.awt.event.KeyAdapter() {
+        quantxt.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        quantxt.setForeground(new java.awt.Color(153, 0, 153));
+        quantxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtQuantityKeyTyped(evt);
+                quantxtKeyTyped(evt);
             }
         });
 
-        btnCreate.setBackground(new java.awt.Color(0, 0, 0));
-        btnCreate.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        btnCreate.setForeground(new java.awt.Color(255, 255, 255));
-        btnCreate.setText("Create");
-        btnCreate.addActionListener(new java.awt.event.ActionListener() {
+        createbtn.setBackground(new java.awt.Color(0, 0, 0));
+        createbtn.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        createbtn.setForeground(new java.awt.Color(255, 255, 255));
+        createbtn.setText("Create");
+        createbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCreateActionPerformed(evt);
+                createbtnActionPerformed(evt);
             }
         });
 
@@ -240,12 +240,12 @@ public class ProviderWorkArea extends javax.swing.JPanel {
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(26, 26, 26)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtReq, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(reqtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(quantxt, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(comboType, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(193, 193, 193)
-                        .addComponent(btnCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(createbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(131, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -258,13 +258,13 @@ public class ProviderWorkArea extends javax.swing.JPanel {
                 .addGap(17, 17, 17)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtReq, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(reqtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(quantxt, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39)
-                .addComponent(btnCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(createbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
@@ -297,10 +297,10 @@ public class ProviderWorkArea extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(211, 211, 211)
-                .addComponent(btnAssign, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(411, 411, 411))
+                .addComponent(assignbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(183, 183, 183)
+                .addComponent(combtn, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(461, 461, 461))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -325,24 +325,28 @@ public class ProviderWorkArea extends javax.swing.JPanel {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAssign, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(237, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(310, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(combtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(assignbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(229, 229, 229))))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnCompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompleteActionPerformed
+    private void combtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combtnActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblProvideReq.getSelectedRow();
 
         if (selectedRow < 0) {
-            JOptionPane.showMessageDialog(null, "To allocate the account, please choose the row", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Select a row to allocate", "Warning", JOptionPane.WARNING_MESSAGE);
         } else {
 
             ProviderWorkRequest pwr = (ProviderWorkRequest) tblProvideReq.getValueAt(selectedRow, 3);
@@ -369,7 +373,7 @@ public class ProviderWorkArea extends javax.swing.JPanel {
 
                     if(temp==1){
                         pwr.setStatus("Complete");
-                        JOptionPane.showMessageDialog(null, "You have completed the request successfully");
+                        JOptionPane.showMessageDialog(null, "Completed the request successfully");
                     }else{
                         pwr.setStatus("Requested");
                         JOptionPane.showMessageDialog(null, "No Stock Available, Request Failed !!","Warning",JOptionPane.WARNING_MESSAGE);
@@ -384,37 +388,37 @@ public class ProviderWorkArea extends javax.swing.JPanel {
             }
         }
 
-    }//GEN-LAST:event_btnCompleteActionPerformed
+    }//GEN-LAST:event_combtnActionPerformed
 
-    private void txtReqKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtReqKeyTyped
+    private void reqtxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_reqtxtKeyTyped
         // TODO add your handling code here:
         char typedReq = evt.getKeyChar();
         if(!Character.isAlphabetic(typedReq) && !Character.isWhitespace(typedReq)){
             evt.consume();
         }
         //Restrict the length to 256
-        if(txtReq.getText().length() > 255){
+        if(reqtxt.getText().length() > 255){
             evt.consume();
         }
-    }//GEN-LAST:event_txtReqKeyTyped
+    }//GEN-LAST:event_reqtxtKeyTyped
 
-    private void txtQuantityKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtQuantityKeyTyped
+    private void quantxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_quantxtKeyTyped
         // TODO add your handling code here:
         char typedQnt = evt.getKeyChar();
         if(!Character.isDigit(typedQnt)){
             evt.consume();
         }
         //Restrict the length to 5
-        if(txtQuantity.getText().length() > 4){
+        if(quantxt.getText().length() > 4){
             evt.consume();
         }
-    }//GEN-LAST:event_txtQuantityKeyTyped
+    }//GEN-LAST:event_quantxtKeyTyped
 
-    private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
+    private void createbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createbtnActionPerformed
         // TODO add your handling code here:
         String type = comboType.getSelectedItem().toString();
-        String req = txtReq.getText();
-        int quantity = Integer.parseInt(txtQuantity.getText());
+        String req = reqtxt.getText();
+        int quantity = Integer.parseInt(quantxt.getText());
 
         if(req.equals("") || req.isEmpty())
 
@@ -431,15 +435,15 @@ public class ProviderWorkArea extends javax.swing.JPanel {
 
         populateTableCreate();
 
-        txtReq.setText("");
-        txtQuantity.setText("");
-    }//GEN-LAST:event_btnCreateActionPerformed
+        reqtxt.setText("");
+        quantxt.setText("");
+    }//GEN-LAST:event_createbtnActionPerformed
 
-    private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignActionPerformed
+    private void assignbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignbtnActionPerformed
         // TODO add your handling code here:
          int selectedRow = tblProvideReq.getSelectedRow();
         if (selectedRow < 0) {
-            JOptionPane.showMessageDialog(null, "To allocate the account, please choose the row", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Select a row to allocate", "Warning", JOptionPane.WARNING_MESSAGE);
         } else {
 
             ProviderWorkRequest nswr = (ProviderWorkRequest) tblProvideReq.getValueAt(selectedRow, 3);
@@ -450,14 +454,14 @@ public class ProviderWorkArea extends javax.swing.JPanel {
             populateTableSupply();
 
         }
-    }//GEN-LAST:event_btnAssignActionPerformed
+    }//GEN-LAST:event_assignbtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAssign;
-    private javax.swing.JButton btnComplete;
-    private javax.swing.JButton btnCreate;
+    private javax.swing.JButton assignbtn;
     private javax.swing.JComboBox comboType;
+    private javax.swing.JButton combtn;
+    private javax.swing.JButton createbtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -467,9 +471,9 @@ public class ProviderWorkArea extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField quantxt;
+    private javax.swing.JTextField reqtxt;
     private javax.swing.JTable tblCreate;
     private javax.swing.JTable tblProvideReq;
-    private javax.swing.JTextField txtQuantity;
-    private javax.swing.JTextField txtReq;
     // End of variables declaration//GEN-END:variables
 }
