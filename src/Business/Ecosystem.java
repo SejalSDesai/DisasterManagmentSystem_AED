@@ -75,7 +75,7 @@ public class Ecosystem extends Organization {
     {
         for(Network n : business.getNetworkList())
         {
-            for(Enterprise e : n.getEnterpriseDirectory().getEnterpriseList())
+            for(Enterprise e : n.getEnterpriseDirectory().getEnterprise_list())
             {
                 for(UserAccount ua : e.getUserAccountDirectory().getUserAccountList())
                 {
@@ -85,7 +85,7 @@ public class Ecosystem extends Organization {
                     }
                 }
                 
-                for(Organization o : e.getOrganizationDirectory().getOrganizationList())
+                for(Organization o : e.getOrganization_directory().getOrganizationList())
                 {
                     for(UserAccount ua : o.getUserAccountDirectory().getUserAccountList())
                     {

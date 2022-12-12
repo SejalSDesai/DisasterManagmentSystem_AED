@@ -97,8 +97,8 @@
                               </Group>
                               <EmptySpace pref="82" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="txtPassword" pref="113" max="32767" attributes="0"/>
-                                  <Component id="txtUsername" max="32767" attributes="0"/>
+                                  <Component id="Password" pref="113" max="32767" attributes="0"/>
+                                  <Component id="Username" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                           </Group>
@@ -107,8 +107,8 @@
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="btnLogout" pref="84" max="32767" attributes="0"/>
-                                          <Component id="btnLogin" max="32767" attributes="0"/>
+                                          <Component id="logoutbtn" pref="84" max="32767" attributes="0"/>
+                                          <Component id="loginbtn" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -128,17 +128,17 @@
                               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtUsername" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Username" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="txtPassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Password" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                              <Component id="btnLogin" min="-2" max="-2" attributes="0"/>
+                              <Component id="loginbtn" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                              <Component id="btnLogout" min="-2" max="-2" attributes="0"/>
+                              <Component id="logoutbtn" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -164,14 +164,14 @@
                         <Property name="text" type="java.lang.String" value="Password"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txtUsername">
+                    <Component class="javax.swing.JTextField" name="Username">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="66" type="rgb"/>
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="btnLogout">
+                    <Component class="javax.swing.JButton" name="logoutbtn">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="66" type="rgb"/>
@@ -185,10 +185,10 @@
                         <Property name="text" type="java.lang.String" value="Logout"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLogoutActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="logoutbtnActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="btnLogin">
+                    <Component class="javax.swing.JButton" name="loginbtn">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="66" type="rgb"/>
@@ -202,10 +202,10 @@
                         <Property name="text" type="java.lang.String" value="Login"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLoginActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginbtnActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JPasswordField" name="txtPassword">
+                    <Component class="javax.swing.JPasswordField" name="Password">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="66" type="rgb"/>

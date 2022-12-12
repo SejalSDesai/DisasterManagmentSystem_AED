@@ -53,3 +53,5 @@ public abstract class Enterprise extends Organization {
     public OrganizationDirectory getOrganization_directory() {
         return organization_directory;
     }
+}
+

@@ -133,11 +133,10 @@ public class EventSeekerAdminWorkArea extends javax.swing.JPanel {
                 .addGap(70, 70, 70))
         );
 
-        add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(568, 204, -1, -1));
+        add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("/Users/sej/Downloads/ezgif.com-gif-maker-6.gif")); // NOI18N
-        jLabel5.setText("jLabel5");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(87, 232, 388, -1));
+        jLabel5.setIcon(new javax.swing.ImageIcon("/Users/sej/Downloads/ezgif.com-gif-maker-2.gif")); // NOI18N
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 330, 290));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageEmployeeActionPerformed
