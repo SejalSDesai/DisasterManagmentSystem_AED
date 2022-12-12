@@ -41,8 +41,8 @@ public class EventSeekerAdminWorkArea extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        btnManageEmployee = new javax.swing.JButton();
-        btnManageUserAccount = new javax.swing.JButton();
+        esemp = new javax.swing.JButton();
+        esuacc = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
@@ -81,23 +81,23 @@ public class EventSeekerAdminWorkArea extends javax.swing.JPanel {
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Manage", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 24))); // NOI18N
         jPanel3.setOpaque(false);
 
-        btnManageEmployee.setBackground(new java.awt.Color(102, 102, 102));
-        btnManageEmployee.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnManageEmployee.setForeground(new java.awt.Color(255, 255, 255));
-        btnManageEmployee.setText(" Employee");
-        btnManageEmployee.addActionListener(new java.awt.event.ActionListener() {
+        esemp.setBackground(new java.awt.Color(102, 102, 102));
+        esemp.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        esemp.setForeground(new java.awt.Color(255, 255, 255));
+        esemp.setText(" Employee");
+        esemp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageEmployeeActionPerformed(evt);
+                esempActionPerformed(evt);
             }
         });
 
-        btnManageUserAccount.setBackground(new java.awt.Color(102, 102, 102));
-        btnManageUserAccount.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnManageUserAccount.setForeground(new java.awt.Color(255, 255, 255));
-        btnManageUserAccount.setText(" User Account");
-        btnManageUserAccount.addActionListener(new java.awt.event.ActionListener() {
+        esuacc.setBackground(new java.awt.Color(102, 102, 102));
+        esuacc.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        esuacc.setForeground(new java.awt.Color(255, 255, 255));
+        esuacc.setText(" User Account");
+        esuacc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageUserAccountActionPerformed(evt);
+                esuaccActionPerformed(evt);
             }
         });
 
@@ -115,8 +115,8 @@ public class EventSeekerAdminWorkArea extends javax.swing.JPanel {
                         .addComponent(jLabel4)
                         .addGap(27, 27, 27)))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnManageUserAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnManageEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(esuacc, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(esemp, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(84, 84, 84))
         );
         jPanel3Layout.setVerticalGroup(
@@ -125,10 +125,10 @@ public class EventSeekerAdminWorkArea extends javax.swing.JPanel {
                 .addGap(50, 50, 50)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnManageEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(esemp, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnManageUserAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(esuacc, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(70, 70, 70))
         );
@@ -139,26 +139,26 @@ public class EventSeekerAdminWorkArea extends javax.swing.JPanel {
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 330, 290));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnManageEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageEmployeeActionPerformed
+    private void esempActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_esempActionPerformed
         // TODO add your handling code here:
         ManageEmployee mngEmp = new ManageEmployee(userProcessContainer, enterprise.getOrganization_directory());
         userProcessContainer.add("SeekerManageEmployee", mngEmp);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnManageEmployeeActionPerformed
+    }//GEN-LAST:event_esempActionPerformed
 
-    private void btnManageUserAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageUserAccountActionPerformed
+    private void esuaccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_esuaccActionPerformed
         // TODO add your handling code here:
         ManageUserAccount mngUser = new ManageUserAccount(userProcessContainer, enterprise);
         userProcessContainer.add("SeekerManageUserAccount", mngUser);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnManageUserAccountActionPerformed
+    }//GEN-LAST:event_esuaccActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnManageEmployee;
-    private javax.swing.JButton btnManageUserAccount;
+    private javax.swing.JButton esemp;
+    private javax.swing.JButton esuacc;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

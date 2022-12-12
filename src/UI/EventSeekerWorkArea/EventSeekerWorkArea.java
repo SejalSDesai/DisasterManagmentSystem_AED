@@ -86,11 +86,11 @@ public class EventSeekerWorkArea extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        txtLoc = new javax.swing.JTextField();
-        txtSubject = new javax.swing.JTextField();
+        loctxt = new javax.swing.JTextField();
+        subtxt = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        txtDesc = new javax.swing.JTextArea();
-        btnPost = new javax.swing.JButton();
+        desctxt = new javax.swing.JTextArea();
+        reqbtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
@@ -149,24 +149,24 @@ public class EventSeekerWorkArea extends javax.swing.JPanel {
         jLabel5.setFont(new java.awt.Font("Adelle Sans Devanagari", 1, 18)); // NOI18N
         jLabel5.setText("Description");
         jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, -1, -1));
-        jPanel3.add(txtLoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 40, 204, -1));
-        jPanel3.add(txtSubject, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 90, 204, -1));
+        jPanel3.add(loctxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 40, 204, -1));
+        jPanel3.add(subtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 90, 204, -1));
 
-        txtDesc.setColumns(20);
-        txtDesc.setRows(5);
-        jScrollPane1.setViewportView(txtDesc);
+        desctxt.setColumns(20);
+        desctxt.setRows(5);
+        jScrollPane1.setViewportView(desctxt);
 
         jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 130, 210, -1));
 
-        btnPost.setBackground(new java.awt.Color(102, 102, 102));
-        btnPost.setForeground(new java.awt.Color(255, 255, 255));
-        btnPost.setText("Request Help");
-        btnPost.addActionListener(new java.awt.event.ActionListener() {
+        reqbtn.setBackground(new java.awt.Color(102, 102, 102));
+        reqbtn.setForeground(new java.awt.Color(255, 255, 255));
+        reqbtn.setText("Request Help");
+        reqbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPostActionPerformed(evt);
+                reqbtnActionPerformed(evt);
             }
         });
-        jPanel3.add(btnPost, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 160, 50));
+        jPanel3.add(reqbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 160, 50));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/EventSeekerWorkArea/ezgif.com-gif-maker.gif"))); // NOI18N
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 300));
@@ -177,22 +177,22 @@ public class EventSeekerWorkArea extends javax.swing.JPanel {
         add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 122, 900, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnPostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPostActionPerformed
+    private void reqbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reqbtnActionPerformed
         // TODO add your handling code here:
-       if(txtSubject.getText().isEmpty() || txtDesc.getText().isEmpty() || txtLoc.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null,"Please fill the Empty fields");
+       if(subtxt.getText().isEmpty() || desctxt.getText().isEmpty() || loctxt.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null,"FIELD CANNOT BE EMPTY");
         }else{
 
-        String subject = txtSubject.getText();
-        String desp = txtDesc.getText();
-        String location = txtLoc.getText();
+        String subject = subtxt.getText();
+        String desp = desctxt.getText();
+        String location = loctxt.getText();
         
         Date d = new Date();
         SimpleDateFormat s = new SimpleDateFormat("MM/dd/YY");
         s.format(d);
         if(subject.equals("") || subject.isEmpty() && desp.equals("") || desp.isEmpty() && location.equals("")|| location.isEmpty())
         {
-            JOptionPane.showMessageDialog(null, "Please enter valid request");
+            JOptionPane.showMessageDialog(null, "Enter valid request");
             return;
         }
         
@@ -209,17 +209,17 @@ public class EventSeekerWorkArea extends javax.swing.JPanel {
         
         populateTableWorkQueue();
         
-        txtSubject.setText("");
-        txtDesc.setText("");
-        txtLoc.setText("");
+        subtxt.setText("");
+        desctxt.setText("");
+        loctxt.setText("");
         
         
         } 
-    }//GEN-LAST:event_btnPostActionPerformed
+    }//GEN-LAST:event_reqbtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnPost;
+    private javax.swing.JTextArea desctxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -230,9 +230,9 @@ public class EventSeekerWorkArea extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField loctxt;
+    private javax.swing.JButton reqbtn;
+    private javax.swing.JTextField subtxt;
     private javax.swing.JTable tblEvent;
-    private javax.swing.JTextArea txtDesc;
-    private javax.swing.JTextField txtLoc;
-    private javax.swing.JTextField txtSubject;
     // End of variables declaration//GEN-END:variables
 }

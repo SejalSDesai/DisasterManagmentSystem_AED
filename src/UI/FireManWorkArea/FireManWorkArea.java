@@ -81,8 +81,8 @@ public class FireManWorkArea extends javax.swing.JPanel {
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        btnAssign = new javax.swing.JButton();
-        btnComplete = new javax.swing.JButton();
+        ackbtn = new javax.swing.JButton();
+        resbtn = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblRequests = new javax.swing.JTable();
 
@@ -111,27 +111,27 @@ public class FireManWorkArea extends javax.swing.JPanel {
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 24, 1673, -1));
 
-        btnAssign.setBackground(new java.awt.Color(153, 153, 153));
-        btnAssign.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnAssign.setForeground(new java.awt.Color(255, 255, 255));
-        btnAssign.setText("Acknowledge");
-        btnAssign.addActionListener(new java.awt.event.ActionListener() {
+        ackbtn.setBackground(new java.awt.Color(153, 153, 153));
+        ackbtn.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        ackbtn.setForeground(new java.awt.Color(255, 255, 255));
+        ackbtn.setText("Acknowledge");
+        ackbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAssignActionPerformed(evt);
+                ackbtnActionPerformed(evt);
             }
         });
-        jPanel2.add(btnAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 438, 245, 58));
+        jPanel2.add(ackbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 438, 245, 58));
 
-        btnComplete.setBackground(new java.awt.Color(153, 153, 153));
-        btnComplete.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnComplete.setForeground(new java.awt.Color(255, 255, 255));
-        btnComplete.setText("Responded");
-        btnComplete.addActionListener(new java.awt.event.ActionListener() {
+        resbtn.setBackground(new java.awt.Color(153, 153, 153));
+        resbtn.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        resbtn.setForeground(new java.awt.Color(255, 255, 255));
+        resbtn.setText("Responded");
+        resbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCompleteActionPerformed(evt);
+                resbtnActionPerformed(evt);
             }
         });
-        jPanel2.add(btnComplete, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 438, 245, 58));
+        jPanel2.add(resbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 438, 245, 58));
 
         tblRequests.setBackground(new java.awt.Color(204, 204, 204));
         tblRequests.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -167,11 +167,11 @@ public class FireManWorkArea extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignActionPerformed
+    private void ackbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ackbtnActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblRequests.getSelectedRow();
         if (selectedRow < 0) {
-            JOptionPane.showMessageDialog(null, "To allocate the account, please choose the row", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Select a row to allocate", "Warning", JOptionPane.WARNING_MESSAGE);
         } else {
 
             VictimWorkRequest cswr = (VictimWorkRequest) tblRequests.getValueAt(selectedRow, 5);
@@ -186,13 +186,13 @@ public class FireManWorkArea extends javax.swing.JPanel {
             }
 
         }
-    }//GEN-LAST:event_btnAssignActionPerformed
+    }//GEN-LAST:event_ackbtnActionPerformed
 
-    private void btnCompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompleteActionPerformed
+    private void resbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resbtnActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblRequests.getSelectedRow();
         if (selectedRow < 0) {
-            JOptionPane.showMessageDialog(null, "To allocate the account, please choose the row", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Select a row to allocate", "Warning", JOptionPane.WARNING_MESSAGE);
         } else {
 
             VictimWorkRequest p = (VictimWorkRequest) tblRequests.getValueAt(selectedRow, 5);
@@ -207,16 +207,16 @@ public class FireManWorkArea extends javax.swing.JPanel {
             }
 
         }
-    }//GEN-LAST:event_btnCompleteActionPerformed
+    }//GEN-LAST:event_resbtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAssign;
-    private javax.swing.JButton btnComplete;
+    private javax.swing.JButton ackbtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton resbtn;
     private javax.swing.JTable tblRequests;
     // End of variables declaration//GEN-END:variables
 }
