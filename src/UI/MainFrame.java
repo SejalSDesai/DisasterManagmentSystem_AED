@@ -56,7 +56,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel3.setBackground(new java.awt.Color(51, 204, 255));
+        jPanel3.setBackground(new java.awt.Color(153, 255, 255));
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Adelle Sans Devanagari", 1, 18)); // NOI18N
@@ -65,9 +65,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Adelle Sans Devanagari", 1, 18)); // NOI18N
         jLabel2.setText("Password");
 
-        Username.setBackground(new java.awt.Color(102, 102, 102));
-
-        logoutbtn.setBackground(new java.awt.Color(102, 102, 102));
+        logoutbtn.setBackground(new java.awt.Color(0, 0, 0));
         logoutbtn.setFont(new java.awt.Font("Adelle Sans Devanagari", 1, 14)); // NOI18N
         logoutbtn.setForeground(new java.awt.Color(255, 255, 255));
         logoutbtn.setText("Logout");
@@ -77,7 +75,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        loginbtn.setBackground(new java.awt.Color(102, 102, 102));
+        loginbtn.setBackground(new java.awt.Color(0, 0, 0));
         loginbtn.setFont(new java.awt.Font("Adelle Sans Devanagari", 1, 14)); // NOI18N
         loginbtn.setForeground(new java.awt.Color(255, 255, 255));
         loginbtn.setText("Login");
@@ -86,8 +84,6 @@ public class MainFrame extends javax.swing.JFrame {
                 loginbtnActionPerformed(evt);
             }
         });
-
-        Password.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/login2.gif"))); // NOI18N
 
@@ -100,11 +96,11 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Password, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
-                    .addComponent(Username))
-                .addGap(90, 90, 90))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Password, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Username, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(75, 75, 75))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
@@ -115,24 +111,24 @@ public class MainFrame extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(65, 65, 65)
                         .addComponent(jLabel5)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
+                .addGap(46, 46, 46)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(Username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(52, 52, 52)
+                    .addComponent(Username, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addGap(41, 41, 41)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(Password, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(71, 71, 71)
                 .addComponent(loginbtn)
-                .addGap(37, 37, 37)
+                .addGap(41, 41, 41)
                 .addComponent(logoutbtn)
                 .addContainerGap())
         );
@@ -155,26 +151,26 @@ public class MainFrame extends javax.swing.JFrame {
 
         panelWorkArea.setLayout(new java.awt.CardLayout());
 
-        jPanel2.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel2.setBackground(new java.awt.Color(0, 153, 153));
 
-        jLabel3.setFont(new java.awt.Font("Adelle Sans Devanagari", 1, 48)); // NOI18N
-        jLabel3.setText("CRISIS MANAGEMENT SYSTEM");
+        jLabel3.setFont(new java.awt.Font("Adelle Sans Devanagari", 1, 36)); // NOI18N
+        jLabel3.setText("DISASTER   MANAGEMENT   SYSTEM");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(94, 94, 94)
+                .addGap(79, 79, 79)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 712, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(381, Short.MAX_VALUE)
+                .addContainerGap(402, Short.MAX_VALUE)
                 .addComponent(jLabel3)
-                .addGap(331, 331, 331))
+                .addGap(333, 333, 333))
         );
 
         panelWorkArea.add(jPanel2, "card2");
@@ -185,9 +181,10 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jSplitPane1))
+                .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1292, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

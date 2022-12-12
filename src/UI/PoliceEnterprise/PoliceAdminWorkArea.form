@@ -139,9 +139,9 @@
                           </Group>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnManageOrganization" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
-                          <Component id="btnManageUserAccount" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
-                          <Component id="btnManageEmployee" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
+                          <Component id="fireorg" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
+                          <Component id="fireuacco" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
+                          <Component id="fireemp" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
                   </Group>
@@ -152,17 +152,17 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnManageOrganization" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="fireorg" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
                           <Component id="jLabel5" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="jLabel3" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
-                          <Component id="btnManageEmployee" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="fireemp" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnManageUserAccount" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="fireuacco" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
                           <Component id="jLabel4" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
@@ -178,7 +178,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnManageEmployee">
+            <Component class="javax.swing.JButton" name="fireemp">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -192,10 +192,10 @@
                 <Property name="text" type="java.lang.String" value=" Employee"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageEmployeeActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fireempActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="btnManageUserAccount">
+            <Component class="javax.swing.JButton" name="fireuacco">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -209,7 +209,7 @@
                 <Property name="text" type="java.lang.String" value=" User Account"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageUserAccountActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fireuaccoActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
@@ -219,7 +219,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnManageOrganization">
+            <Component class="javax.swing.JButton" name="fireorg">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -233,7 +233,7 @@
                 <Property name="text" type="java.lang.String" value="Organization"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageOrganizationActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fireorgActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel5">

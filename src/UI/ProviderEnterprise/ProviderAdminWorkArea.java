@@ -45,10 +45,10 @@ public class ProviderAdminWorkArea extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        btnManageEmployee = new javax.swing.JButton();
-        btnManageUserAccount = new javax.swing.JButton();
+        proemp = new javax.swing.JButton();
+        prouac = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        btnManageOrganization = new javax.swing.JButton();
+        proorg = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 255));
@@ -90,35 +90,35 @@ public class ProviderAdminWorkArea extends javax.swing.JPanel {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/employee.png"))); // NOI18N
 
-        btnManageEmployee.setBackground(new java.awt.Color(153, 153, 153));
-        btnManageEmployee.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnManageEmployee.setForeground(new java.awt.Color(255, 255, 255));
-        btnManageEmployee.setText(" Employee");
-        btnManageEmployee.addActionListener(new java.awt.event.ActionListener() {
+        proemp.setBackground(new java.awt.Color(153, 153, 153));
+        proemp.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        proemp.setForeground(new java.awt.Color(255, 255, 255));
+        proemp.setText(" Employee");
+        proemp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageEmployeeActionPerformed(evt);
+                proempActionPerformed(evt);
             }
         });
 
-        btnManageUserAccount.setBackground(new java.awt.Color(153, 153, 153));
-        btnManageUserAccount.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnManageUserAccount.setForeground(new java.awt.Color(255, 255, 255));
-        btnManageUserAccount.setText(" User Account");
-        btnManageUserAccount.addActionListener(new java.awt.event.ActionListener() {
+        prouac.setBackground(new java.awt.Color(153, 153, 153));
+        prouac.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        prouac.setForeground(new java.awt.Color(255, 255, 255));
+        prouac.setText(" User Account");
+        prouac.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageUserAccountActionPerformed(evt);
+                prouacActionPerformed(evt);
             }
         });
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/user.jpg"))); // NOI18N
 
-        btnManageOrganization.setBackground(new java.awt.Color(153, 153, 153));
-        btnManageOrganization.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnManageOrganization.setForeground(new java.awt.Color(255, 255, 255));
-        btnManageOrganization.setText("Organization");
-        btnManageOrganization.addActionListener(new java.awt.event.ActionListener() {
+        proorg.setBackground(new java.awt.Color(153, 153, 153));
+        proorg.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        proorg.setForeground(new java.awt.Color(255, 255, 255));
+        proorg.setText("Organization");
+        proorg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageOrganizationActionPerformed(evt);
+                proorgActionPerformed(evt);
             }
         });
 
@@ -141,9 +141,9 @@ public class ProviderAdminWorkArea extends javax.swing.JPanel {
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnManageOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnManageUserAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnManageEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(proorg, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(prouac, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(proemp, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(100, 100, 100))
         );
         jPanel3Layout.setVerticalGroup(
@@ -151,15 +151,15 @@ public class ProviderAdminWorkArea extends javax.swing.JPanel {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnManageOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(proorg, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnManageEmployee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(proemp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(50, 50, 50)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnManageUserAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(prouac, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50))
         );
@@ -182,35 +182,32 @@ public class ProviderAdminWorkArea extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnManageEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageEmployeeActionPerformed
+    private void proempActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proempActionPerformed
         // TODO add your handling code here:
         ManageEmployee mngEmp = new ManageEmployee(userProcessContainer, enterprise.getOrganization_directory());
         userProcessContainer.add("ManageEmployee", mngEmp);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnManageEmployeeActionPerformed
+    }//GEN-LAST:event_proempActionPerformed
 
-    private void btnManageUserAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageUserAccountActionPerformed
+    private void prouacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prouacActionPerformed
         // TODO add your handling code here:
         ManageUserAccount mngUser = new ManageUserAccount(userProcessContainer, enterprise);
         userProcessContainer.add("ManageUserAccount", mngUser);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnManageUserAccountActionPerformed
+    }//GEN-LAST:event_prouacActionPerformed
 
-    private void btnManageOrganizationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageOrganizationActionPerformed
+    private void proorgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proorgActionPerformed
         // TODO add your handling code here:
         ManageOrganization mngOrg = new ManageOrganization(userProcessContainer, enterprise.getOrganization_directory());
         userProcessContainer.add("ManageOrganization", mngOrg);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnManageOrganizationActionPerformed
+    }//GEN-LAST:event_proorgActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnManageEmployee;
-    private javax.swing.JButton btnManageOrganization;
-    private javax.swing.JButton btnManageUserAccount;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -219,5 +216,8 @@ public class ProviderAdminWorkArea extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JButton proemp;
+    private javax.swing.JButton proorg;
+    private javax.swing.JButton prouac;
     // End of variables declaration//GEN-END:variables
 }

@@ -32,26 +32,11 @@ public class ManageUserAccount extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.enterprise=enterprise;
-        populateComboOrganization();
-        populateData();
+        selectCombo();
+        displayCombo();
     }
-    public void populateComboOrganization() {
-        comboOrg.removeAllItems();
-
-        for (Organization organization : enterprise.getOrganization_directory().getOrganizationList()) {
-            if(organization instanceof EventMakerOrganization)
-            comboOrg.addItem(organization);
-            
-        }
-    }
-    public void populateComboEmployee(Organization organization){
-        comboEmp.removeAllItems();
-        
-        for (Employee employee : organization.getEmployeeDirectory().getEmplist()){
-            comboEmp.addItem(employee);
-        }
-    }
-    //populate respective roles
+    
+      //populate respective roles
     private void populateComboRole(Enterprise e){
         comboRole.removeAllItems();
         Organization organization = (Organization) comboOrg.getSelectedItem();
@@ -61,7 +46,27 @@ public class ManageUserAccount extends javax.swing.JPanel {
         }
       
     }
-     public void populateData() {
+    
+    public void populateComboEmployee(Organization organization){
+        comboEmp.removeAllItems();
+        
+        for (Employee employee : organization.getEmployeeDirectory().getEmplist()){
+            comboEmp.addItem(employee);
+        }
+    }
+    
+    public void selectCombo() {
+        comboOrg.removeAllItems();
+
+        for (Organization organization : enterprise.getOrganization_directory().getOrganizationList()) {
+            if(organization instanceof EventMakerOrganization)
+            comboOrg.addItem(organization);
+            
+        }
+    }
+    
+  
+     public void displayCombo() {
 
         DefaultTableModel model = (DefaultTableModel) tblUser.getModel();
 
@@ -93,10 +98,10 @@ public class ManageUserAccount extends javax.swing.JPanel {
         jPanel4 = new javax.swing.JPanel();
         btnAddUser = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        txtName = new javax.swing.JTextField();
+        uname = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         comboOrg = new javax.swing.JComboBox();
-        txtPassword = new javax.swing.JPasswordField();
+        pword = new javax.swing.JPasswordField();
         lblPassword = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         comboEmp = new javax.swing.JComboBox();
@@ -173,9 +178,9 @@ public class ManageUserAccount extends javax.swing.JPanel {
         jLabel2.setText("Username");
         jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(45, 241, 250, 45));
 
-        txtName.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
-        txtName.setForeground(new java.awt.Color(153, 0, 153));
-        jPanel4.add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(352, 241, 250, 45));
+        uname.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        uname.setForeground(new java.awt.Color(153, 0, 153));
+        jPanel4.add(uname, new org.netbeans.lib.awtextra.AbsoluteConstraints(352, 241, 250, 45));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
         jLabel3.setText("Organization");
@@ -189,9 +194,9 @@ public class ManageUserAccount extends javax.swing.JPanel {
         });
         jPanel4.add(comboOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(352, 61, 250, 45));
 
-        txtPassword.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
-        txtPassword.setForeground(new java.awt.Color(153, 0, 153));
-        jPanel4.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(352, 301, 250, 45));
+        pword.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        pword.setForeground(new java.awt.Color(153, 0, 153));
+        jPanel4.add(pword, new org.netbeans.lib.awtextra.AbsoluteConstraints(352, 301, 250, 45));
 
         lblPassword.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
         lblPassword.setText("Password");
@@ -224,11 +229,11 @@ public class ManageUserAccount extends javax.swing.JPanel {
 
     private void btnAddUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddUserActionPerformed
         // TODO add your handling code here:
-        if(txtName.getText().isEmpty()|| txtPassword.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null,"Please fill the empty fields");
+        if(uname.getText().isEmpty()|| pword.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null,"FIELD CANNOT BE EMPTY");
         }else{
-            String userName = txtName.getText();
-            String password = txtPassword.getText();
+            String userName = uname.getText();
+            String password = pword.getText();
             if(Ecosystem.checkIfUsernameIsUnique(userName)){
                 Organization organization = (Organization) comboOrg.getSelectedItem();
                 Employee employee = (Employee) comboEmp.getSelectedItem();
@@ -243,12 +248,12 @@ public class ManageUserAccount extends javax.swing.JPanel {
 
                 }
                 organization.getUserAccountDirectory().createUserAccount(userName, password, employee, role);
-                populateData();
-                txtName.setText("");
-                txtPassword.setText("");
+                displayCombo();
+                uname.setText("");
+                pword.setText("");
             }
             else{
-                JOptionPane.showMessageDialog(null, "Username must be unique", "Warning", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Enter unique username", "Warning", JOptionPane.WARNING_MESSAGE);
             }
         }
     }//GEN-LAST:event_btnAddUserActionPerformed
@@ -285,8 +290,8 @@ public class ManageUserAccount extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblPassword;
+    private javax.swing.JPasswordField pword;
     private javax.swing.JTable tblUser;
-    private javax.swing.JTextField txtName;
-    private javax.swing.JPasswordField txtPassword;
+    private javax.swing.JTextField uname;
     // End of variables declaration//GEN-END:variables
 }

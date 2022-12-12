@@ -43,7 +43,7 @@ public class NGOManagerWorkArea extends javax.swing.JPanel {
     private Ecosystem system;
     private Date d;
     private SimpleDateFormat s;
-    public NGOManagerWorkArea() {
+    public NGOManagerWorkArea(JPanel userProcessContainer,UserAccount account,Organization organization,Enterprise enterprise,Ecosystem system) {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.account=account;

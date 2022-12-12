@@ -29,8 +29,8 @@ public class ManageEmployee extends javax.swing.JPanel {
         initComponents();   
         this.userProcessContainer=userProcessContainer;
         this.orgdirectory=orgdirectory;
-        populateComboOrganization();
-        populateComboOrganizationEmp();
+        displayCombo();
+        selectCombo();
     }
     //populate police employee table by adding employees
     private void populateTbl(Organization organization){
@@ -47,7 +47,7 @@ public class ManageEmployee extends javax.swing.JPanel {
         }
     }
     //populate organization combo box
-    public void populateComboOrganization(){
+    public void displayCombo(){
         comboOrg.removeAllItems();
         
         for (Organization organization : orgdirectory.getOrganizationList()){
@@ -56,7 +56,7 @@ public class ManageEmployee extends javax.swing.JPanel {
         }
     }
     //populate employee - police organization combo box
-    public void populateComboOrganizationEmp(){
+    public void selectCombo(){
         comboOrgSelect.removeAllItems();
 
         for (Organization organization : orgdirectory.getOrganizationList()){
@@ -80,9 +80,9 @@ public class ManageEmployee extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblEmp = new javax.swing.JTable();
         jPanel4 = new javax.swing.JPanel();
-        btnAddEmployee = new javax.swing.JButton();
+        addbtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        txtName = new javax.swing.JTextField();
+        nametxt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         comboOrgSelect = new javax.swing.JComboBox();
         btnBack = new javax.swing.JButton();
@@ -140,22 +140,22 @@ public class ManageEmployee extends javax.swing.JPanel {
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Manage", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 24), new java.awt.Color(153, 0, 153))); // NOI18N
         jPanel4.setOpaque(false);
 
-        btnAddEmployee.setBackground(new java.awt.Color(153, 153, 153));
-        btnAddEmployee.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnAddEmployee.setText("Add Employee");
-        btnAddEmployee.addActionListener(new java.awt.event.ActionListener() {
+        addbtn.setBackground(new java.awt.Color(153, 153, 153));
+        addbtn.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        addbtn.setText("Add Employee");
+        addbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddEmployeeActionPerformed(evt);
+                addbtnActionPerformed(evt);
             }
         });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel2.setText("Name");
 
-        txtName.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtName.addKeyListener(new java.awt.event.KeyAdapter() {
+        nametxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        nametxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtNameKeyTyped(evt);
+                nametxtKeyTyped(evt);
             }
         });
 
@@ -175,12 +175,12 @@ public class ManageEmployee extends javax.swing.JPanel {
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(comboOrgSelect, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(51, 51, 51))
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(172, 172, 172)
-                .addComponent(btnAddEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(addbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -193,9 +193,9 @@ public class ManageEmployee extends javax.swing.JPanel {
                 .addGap(50, 50, 50)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50)
-                .addComponent(btnAddEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(addbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50))
         );
 
@@ -250,33 +250,33 @@ public class ManageEmployee extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAddEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddEmployeeActionPerformed
+    private void addbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addbtnActionPerformed
         // TODO add your handling code here:
-        if(txtName.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null,"Please fill the Empty fields");
+        if(nametxt.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null,"FIELD CANNOT BE EMPTY");
         }else{
 
             Organization organization =(Organization)comboOrgSelect.getSelectedItem();
-            String name = txtName.getText();
+            String name = nametxt.getText();
 
             organization.getEmployeeDirectory().createEmployee(name);
             populateTbl(organization);
 
-            txtName.setText("");
+            nametxt.setText("");
         }
-    }//GEN-LAST:event_btnAddEmployeeActionPerformed
+    }//GEN-LAST:event_addbtnActionPerformed
 
-    private void txtNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameKeyTyped
+    private void nametxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nametxtKeyTyped
         // TODO add your handling code here:
         char typedName = evt.getKeyChar();
         if(!Character.isAlphabetic(typedName) && !Character.isWhitespace(typedName)){
             evt.consume();
         }
         //Restrict the length to 256
-        if(txtName.getText().length() > 255){
+        if(nametxt.getText().length() > 250){
             evt.consume();
         }
-    }//GEN-LAST:event_txtNameKeyTyped
+    }//GEN-LAST:event_nametxtKeyTyped
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
@@ -302,7 +302,7 @@ public class ManageEmployee extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAddEmployee;
+    private javax.swing.JButton addbtn;
     private javax.swing.JButton btnBack;
     private javax.swing.JComboBox comboOrg;
     private javax.swing.JComboBox comboOrgSelect;
@@ -316,7 +316,7 @@ public class ManageEmployee extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField nametxt;
     private javax.swing.JTable tblEmp;
-    private javax.swing.JTextField txtName;
     // End of variables declaration//GEN-END:variables
 }

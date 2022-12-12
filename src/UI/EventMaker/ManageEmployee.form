@@ -100,14 +100,14 @@
                   </Group>
                   <EmptySpace pref="81" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="txtName" alignment="0" max="32767" attributes="0"/>
+                      <Component id="nametxt" alignment="0" max="32767" attributes="0"/>
                       <Component id="comboOrgSelect" alignment="0" pref="245" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="171" max="-2" attributes="0"/>
-                  <Component id="btnAddEmployee" min="-2" pref="245" max="-2" attributes="0"/>
+                  <Component id="empadd" min="-2" pref="245" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -122,18 +122,18 @@
                   </Group>
                   <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="txtName" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="nametxt" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
                       <Component id="jLabel2" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="55" max="32767" attributes="0"/>
-                  <Component id="btnAddEmployee" min="-2" pref="58" max="-2" attributes="0"/>
+                  <Component id="empadd" min="-2" pref="58" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="btnAddEmployee">
+        <Component class="javax.swing.JButton" name="empadd">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="99" red="99" type="rgb"/>
@@ -144,7 +144,7 @@
             <Property name="text" type="java.lang.String" value="Add Employee"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddEmployeeActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="empaddActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
@@ -155,7 +155,7 @@
             <Property name="text" type="java.lang.String" value="Name"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtName">
+        <Component class="javax.swing.JTextField" name="nametxt">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="28" style="0"/>
@@ -165,7 +165,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtNameKeyTyped"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="nametxtKeyTyped"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">

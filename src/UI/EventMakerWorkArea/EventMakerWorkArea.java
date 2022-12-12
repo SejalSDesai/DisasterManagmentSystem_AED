@@ -87,9 +87,9 @@ public class EventMakerWorkArea extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblEvent = new javax.swing.JTable();
-        btnView = new javax.swing.JButton();
-        btnAssignTo = new javax.swing.JButton();
-        btnComplete = new javax.swing.JButton();
+        viewbtn = new javax.swing.JButton();
+        ackbtn = new javax.swing.JButton();
+        combtn = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         btnPolice = new javax.swing.JButton();
@@ -158,27 +158,27 @@ public class EventMakerWorkArea extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblEvent);
 
-        btnView.setBackground(new java.awt.Color(0, 0, 0));
-        btnView.setForeground(new java.awt.Color(255, 255, 255));
-        btnView.setText("VIEW");
-        btnView.addActionListener(new java.awt.event.ActionListener() {
+        viewbtn.setBackground(new java.awt.Color(0, 0, 0));
+        viewbtn.setForeground(new java.awt.Color(255, 255, 255));
+        viewbtn.setText("VIEW");
+        viewbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewActionPerformed(evt);
+                viewbtnActionPerformed(evt);
             }
         });
 
-        btnAssignTo.setBackground(new java.awt.Color(0, 0, 0));
-        btnAssignTo.setForeground(new java.awt.Color(255, 255, 255));
-        btnAssignTo.setText("Acknowledge");
-        btnAssignTo.addActionListener(new java.awt.event.ActionListener() {
+        ackbtn.setBackground(new java.awt.Color(0, 0, 0));
+        ackbtn.setForeground(new java.awt.Color(255, 255, 255));
+        ackbtn.setText("Acknowledge");
+        ackbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAssignToActionPerformed(evt);
+                ackbtnActionPerformed(evt);
             }
         });
 
-        btnComplete.setBackground(new java.awt.Color(0, 0, 0));
-        btnComplete.setForeground(new java.awt.Color(255, 255, 255));
-        btnComplete.setText("Complete");
+        combtn.setBackground(new java.awt.Color(0, 0, 0));
+        combtn.setForeground(new java.awt.Color(255, 255, 255));
+        combtn.setText("Complete");
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Relay Request To", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 24))); // NOI18N
         jPanel4.setOpaque(false);
@@ -353,11 +353,11 @@ public class EventMakerWorkArea extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1311, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(145, 145, 145)
-                .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(viewbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(247, 247, 247)
-                .addComponent(btnAssignTo, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ackbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(221, 221, 221)
-                .addComponent(btnComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(combtn, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(140, 140, 140)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -373,9 +373,9 @@ public class EventMakerWorkArea extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAssignTo, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(viewbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ackbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(combtn, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -383,11 +383,11 @@ public class EventMakerWorkArea extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+    private void viewbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewbtnActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblEvent.getSelectedRow();
         if (selectedRow < 0) {
-            JOptionPane.showMessageDialog(null, "To allocate the account, please choose the row", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Please choose the row to allocate", "Warning", JOptionPane.WARNING_MESSAGE);
         } else {
             
             
@@ -397,13 +397,13 @@ public class EventMakerWorkArea extends javax.swing.JPanel {
             txtDesc.setText(p.getDescription());
             txtLoc.setText(p.getLocation());
         }
-    }//GEN-LAST:event_btnViewActionPerformed
+    }//GEN-LAST:event_viewbtnActionPerformed
 
     private void btnPoliceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPoliceActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblEvent.getSelectedRow();
         if (selectedRow < 0) {
-            JOptionPane.showMessageDialog(null, "Please choose the row to forward request to the Police", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Select a row to send request to police", "Warning", JOptionPane.WARNING_MESSAGE);
         } else {
             VictimWorkRequest cswr = (VictimWorkRequest) tblEvent.getValueAt(selectedRow, 5);
             if(cswr.getStatus().equals("Assigned to the Police")){
@@ -427,7 +427,7 @@ public class EventMakerWorkArea extends javax.swing.JPanel {
         // TODO add your handling code here:
         int selectedRow = tblEvent.getSelectedRow();
         if (selectedRow < 0) {
-            JOptionPane.showMessageDialog(null, "Please choose the row to forward request to the Doctor", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Select a row to send request to doctor", "Warning", JOptionPane.WARNING_MESSAGE);
         } else{
 
             VictimWorkRequest cswr = (VictimWorkRequest) tblEvent.getValueAt(selectedRow, 5);
@@ -454,7 +454,7 @@ public class EventMakerWorkArea extends javax.swing.JPanel {
         // TODO add your handling code here:
         int selectedRow = tblEvent.getSelectedRow();
         if (selectedRow < 0) {
-            JOptionPane.showMessageDialog(null, "Please choose the row to forward request to the FireMan", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Select a row to send request to fireman", "Warning", JOptionPane.WARNING_MESSAGE);
         } else {
             VictimWorkRequest cswr = (VictimWorkRequest) tblEvent.getValueAt(selectedRow, 5);
             if(cswr.getStatus().equals("Assigned to the FireMan")){
@@ -478,7 +478,7 @@ public class EventMakerWorkArea extends javax.swing.JPanel {
         // TODO add your handling code here:
         int selectedRow = tblEvent.getSelectedRow();
         if (selectedRow < 0) {
-            JOptionPane.showMessageDialog(null, "Please choose the row to forward request to the NGO", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Select a row to send request to NGO", "Warning", JOptionPane.WARNING_MESSAGE);
         } else {
 
             VictimWorkRequest cswr = (VictimWorkRequest) tblEvent.getValueAt(selectedRow, 5);
@@ -493,11 +493,11 @@ public class EventMakerWorkArea extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnNGOActionPerformed
 
-    private void btnAssignToActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignToActionPerformed
+    private void ackbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ackbtnActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblEvent.getSelectedRow();
         if (selectedRow < 0) {
-            JOptionPane.showMessageDialog(null, "To allocate the account, please choose the row", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Please choose the row to allocate", "Warning", JOptionPane.WARNING_MESSAGE);
         } else {
 
             VictimWorkRequest cswr = (VictimWorkRequest) tblEvent.getValueAt(selectedRow, 5);
@@ -514,17 +514,16 @@ public class EventMakerWorkArea extends javax.swing.JPanel {
             }
 
         }
-    }//GEN-LAST:event_btnAssignToActionPerformed
+    }//GEN-LAST:event_ackbtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAssignTo;
-    private javax.swing.JButton btnComplete;
+    private javax.swing.JButton ackbtn;
     private javax.swing.JButton btnFire;
     private javax.swing.JButton btnHealth;
     private javax.swing.JButton btnNGO;
     private javax.swing.JButton btnPolice;
-    private javax.swing.JButton btnView;
+    private javax.swing.JButton combtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -539,5 +538,6 @@ public class EventMakerWorkArea extends javax.swing.JPanel {
     private javax.swing.JTextArea txtDesc;
     private javax.swing.JTextField txtLoc;
     private javax.swing.JTextField txtSubject;
+    private javax.swing.JButton viewbtn;
     // End of variables declaration//GEN-END:variables
 }

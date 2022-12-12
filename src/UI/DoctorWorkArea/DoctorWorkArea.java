@@ -39,11 +39,11 @@ public class DoctorWorkArea extends javax.swing.JPanel {
         this.enterprise=enterprise;
         this.system=system;
         
-         populateDoctorTable();
+         doctorPopulate();
         
     
     }
-    public void populateDoctorTable(){
+    public void doctorPopulate(){
 
          DefaultTableModel model = (DefaultTableModel) tblRequests.getModel();
         
@@ -85,8 +85,8 @@ public class DoctorWorkArea extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblRequests = new javax.swing.JTable();
-        btnAssign = new javax.swing.JButton();
-        btnComplete = new javax.swing.JButton();
+        ackbtn = new javax.swing.JButton();
+        resbtn = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(204, 255, 255));
@@ -104,7 +104,7 @@ public class DoctorWorkArea extends javax.swing.JPanel {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1355, Short.MAX_VALUE)
                 .addGap(16, 16, 16))
         );
         jPanel3Layout.setVerticalGroup(
@@ -143,83 +143,83 @@ public class DoctorWorkArea extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 159, 1356, 206));
 
-        btnAssign.setBackground(new java.awt.Color(102, 102, 102));
-        btnAssign.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnAssign.setForeground(new java.awt.Color(255, 255, 255));
-        btnAssign.setText("Acknowledge");
-        btnAssign.addActionListener(new java.awt.event.ActionListener() {
+        ackbtn.setBackground(new java.awt.Color(102, 102, 102));
+        ackbtn.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        ackbtn.setForeground(new java.awt.Color(255, 255, 255));
+        ackbtn.setText("Acknowledge");
+        ackbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAssignActionPerformed(evt);
+                ackbtnActionPerformed(evt);
             }
         });
-        add(btnAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 392, 245, 58));
+        add(ackbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 392, 245, 58));
 
-        btnComplete.setBackground(new java.awt.Color(102, 102, 102));
-        btnComplete.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnComplete.setForeground(new java.awt.Color(255, 255, 255));
-        btnComplete.setText("Responded");
-        btnComplete.addActionListener(new java.awt.event.ActionListener() {
+        resbtn.setBackground(new java.awt.Color(102, 102, 102));
+        resbtn.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        resbtn.setForeground(new java.awt.Color(255, 255, 255));
+        resbtn.setText("Responded");
+        resbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCompleteActionPerformed(evt);
+                resbtnActionPerformed(evt);
             }
         });
-        add(btnComplete, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 527, 245, 58));
+        add(resbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 527, 245, 58));
 
         jLabel3.setIcon(new javax.swing.ImageIcon("/Users/sej/Downloads/ezgif.com-gif-maker-5.gif")); // NOI18N
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(486, 414, -1, 301));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignActionPerformed
+    private void ackbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ackbtnActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblRequests.getSelectedRow();
         if (selectedRow < 0) {
-            JOptionPane.showMessageDialog(null, "To allocate the account, please choose the row", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Please select the row to allocate", "Warning", JOptionPane.WARNING_MESSAGE);
         } else {
 
             VictimWorkRequest cswr = (VictimWorkRequest) tblRequests.getValueAt(selectedRow, 5);
             if(cswr.getStatus().equalsIgnoreCase("Assigned To Doctor")){
-                cswr.setStatus("Doctor assigned the Request");
+                cswr.setStatus("Request assigned to doctor");
                 cswr.setReciever(account);
 
-                populateDoctorTable();
+                doctorPopulate();
             }
             else{
                 JOptionPane.showMessageDialog(null, "Wrong Request", "Warning", JOptionPane.WARNING_MESSAGE);
             }
         }
 
-    }//GEN-LAST:event_btnAssignActionPerformed
+    }//GEN-LAST:event_ackbtnActionPerformed
 
-    private void btnCompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompleteActionPerformed
+    private void resbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resbtnActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblRequests.getSelectedRow();
         if (selectedRow < 0) {
-            JOptionPane.showMessageDialog(null, "To allocate the account, please choose the row.", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Please select the row to allocate", "Warning", JOptionPane.WARNING_MESSAGE);
         } else {
 
             VictimWorkRequest p = (VictimWorkRequest) tblRequests.getValueAt(selectedRow, 5);
-            if(p.getStatus().equalsIgnoreCase("Doctor assigned the Request")){
+            if(p.getStatus().equalsIgnoreCase("Request assigned to doctor")){
                 p.setStatus("Complete");
                 p.setReciever(account);
-                JOptionPane.showMessageDialog(null, "You have completed the request successfully");
-                populateDoctorTable();
+                JOptionPane.showMessageDialog(null, "Request completed successsfully");
+                doctorPopulate();
             }
             else{
                 JOptionPane.showMessageDialog(null, "Wrong Request", "Warning", JOptionPane.WARNING_MESSAGE);
             }
 
         }
-    }//GEN-LAST:event_btnCompleteActionPerformed
+    }//GEN-LAST:event_resbtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAssign;
-    private javax.swing.JButton btnComplete;
+    private javax.swing.JButton ackbtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton resbtn;
     private javax.swing.JTable tblRequests;
     // End of variables declaration//GEN-END:variables
 }

@@ -46,10 +46,10 @@ public class PoliceAdminWorkArea extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        btnManageEmployee = new javax.swing.JButton();
-        btnManageUserAccount = new javax.swing.JButton();
+        fireemp = new javax.swing.JButton();
+        fireuacco = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        btnManageOrganization = new javax.swing.JButton();
+        fireorg = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
@@ -88,35 +88,35 @@ public class PoliceAdminWorkArea extends javax.swing.JPanel {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/employee.png"))); // NOI18N
 
-        btnManageEmployee.setBackground(new java.awt.Color(153, 153, 153));
-        btnManageEmployee.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnManageEmployee.setForeground(new java.awt.Color(255, 255, 255));
-        btnManageEmployee.setText(" Employee");
-        btnManageEmployee.addActionListener(new java.awt.event.ActionListener() {
+        fireemp.setBackground(new java.awt.Color(153, 153, 153));
+        fireemp.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        fireemp.setForeground(new java.awt.Color(255, 255, 255));
+        fireemp.setText(" Employee");
+        fireemp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageEmployeeActionPerformed(evt);
+                fireempActionPerformed(evt);
             }
         });
 
-        btnManageUserAccount.setBackground(new java.awt.Color(153, 153, 153));
-        btnManageUserAccount.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnManageUserAccount.setForeground(new java.awt.Color(255, 255, 255));
-        btnManageUserAccount.setText(" User Account");
-        btnManageUserAccount.addActionListener(new java.awt.event.ActionListener() {
+        fireuacco.setBackground(new java.awt.Color(153, 153, 153));
+        fireuacco.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        fireuacco.setForeground(new java.awt.Color(255, 255, 255));
+        fireuacco.setText(" User Account");
+        fireuacco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageUserAccountActionPerformed(evt);
+                fireuaccoActionPerformed(evt);
             }
         });
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/user.jpg"))); // NOI18N
 
-        btnManageOrganization.setBackground(new java.awt.Color(153, 153, 153));
-        btnManageOrganization.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnManageOrganization.setForeground(new java.awt.Color(255, 255, 255));
-        btnManageOrganization.setText("Organization");
-        btnManageOrganization.addActionListener(new java.awt.event.ActionListener() {
+        fireorg.setBackground(new java.awt.Color(153, 153, 153));
+        fireorg.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        fireorg.setForeground(new java.awt.Color(255, 255, 255));
+        fireorg.setText("Organization");
+        fireorg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageOrganizationActionPerformed(evt);
+                fireorgActionPerformed(evt);
             }
         });
 
@@ -138,9 +138,9 @@ public class PoliceAdminWorkArea extends javax.swing.JPanel {
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(27, 27, 27)))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnManageOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnManageUserAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnManageEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fireorg, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fireuacco, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fireemp, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(100, 100, 100))
         );
         jPanel3Layout.setVerticalGroup(
@@ -148,15 +148,15 @@ public class PoliceAdminWorkArea extends javax.swing.JPanel {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnManageOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fireorg, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnManageEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fireemp, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnManageUserAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fireuacco, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50))
         );
@@ -182,35 +182,35 @@ public class PoliceAdminWorkArea extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnManageEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageEmployeeActionPerformed
+    private void fireempActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fireempActionPerformed
         // TODO add your handling code here:
         ManageEmployee mngEmp = new ManageEmployee(userProcessContainer, enterprise.getOrganization_directory());
         userProcessContainer.add("ManageEmployee", mngEmp);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnManageEmployeeActionPerformed
+    }//GEN-LAST:event_fireempActionPerformed
 
-    private void btnManageUserAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageUserAccountActionPerformed
+    private void fireuaccoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fireuaccoActionPerformed
         // TODO add your handling code here:
         ManageUserAccount mngUser = new ManageUserAccount(userProcessContainer, enterprise);
         userProcessContainer.add("ManageUserAccount", mngUser);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnManageUserAccountActionPerformed
+    }//GEN-LAST:event_fireuaccoActionPerformed
 
-    private void btnManageOrganizationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageOrganizationActionPerformed
+    private void fireorgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fireorgActionPerformed
         // TODO add your handling code here:
         ManageOrganization mngOrg = new ManageOrganization(userProcessContainer, enterprise.getOrganization_directory());
         userProcessContainer.add("ManageOrganization", mngOrg);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnManageOrganizationActionPerformed
+    }//GEN-LAST:event_fireorgActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnManageEmployee;
-    private javax.swing.JButton btnManageOrganization;
-    private javax.swing.JButton btnManageUserAccount;
+    private javax.swing.JButton fireemp;
+    private javax.swing.JButton fireorg;
+    private javax.swing.JButton fireuacco;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

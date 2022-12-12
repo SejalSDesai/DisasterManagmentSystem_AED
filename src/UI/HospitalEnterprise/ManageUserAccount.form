@@ -156,8 +156,8 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtName" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="txtPassword" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="uname" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="pword" alignment="1" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="comboRole" min="-2" pref="250" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -210,12 +210,12 @@
                       <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel2" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                          <Component id="txtName" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                          <Component id="uname" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="lblPassword" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                          <Component id="txtPassword" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                          <Component id="pword" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="btnAddUser" min="-2" pref="58" max="-2" attributes="0"/>
@@ -250,7 +250,7 @@
                 <Property name="text" type="java.lang.String" value="Username"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtName">
+            <Component class="javax.swing.JTextField" name="uname">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="0"/>
@@ -284,7 +284,7 @@
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JPasswordField" name="txtPassword">
+            <Component class="javax.swing.JPasswordField" name="pword">
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="0" red="99" type="rgb"/>

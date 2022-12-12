@@ -31,11 +31,11 @@
           </Group>
           <Group type="102" attributes="0">
               <EmptySpace min="145" pref="145" max="-2" attributes="0"/>
-              <Component id="btnView" min="-2" pref="172" max="-2" attributes="0"/>
+              <Component id="viewbtn" min="-2" pref="172" max="-2" attributes="0"/>
               <EmptySpace min="247" pref="247" max="-2" attributes="0"/>
-              <Component id="btnAssignTo" min="-2" pref="142" max="-2" attributes="0"/>
+              <Component id="ackbtn" min="-2" pref="142" max="-2" attributes="0"/>
               <EmptySpace min="221" pref="221" max="-2" attributes="0"/>
-              <Component id="btnComplete" min="-2" pref="144" max="-2" attributes="0"/>
+              <Component id="combtn" min="-2" pref="144" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
               <EmptySpace min="140" pref="140" max="-2" attributes="0"/>
@@ -54,9 +54,9 @@
               <Component id="jScrollPane1" min="-2" pref="196" max="-2" attributes="0"/>
               <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnView" min="-2" pref="55" max="-2" attributes="0"/>
-                  <Component id="btnAssignTo" min="-2" pref="55" max="-2" attributes="0"/>
-                  <Component id="btnComplete" min="-2" pref="55" max="-2" attributes="0"/>
+                  <Component id="viewbtn" min="-2" pref="55" max="-2" attributes="0"/>
+                  <Component id="ackbtn" min="-2" pref="55" max="-2" attributes="0"/>
+                  <Component id="combtn" min="-2" pref="55" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="33" pref="33" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -145,7 +145,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="btnView">
+    <Component class="javax.swing.JButton" name="viewbtn">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="0" type="rgb"/>
@@ -156,10 +156,10 @@
         <Property name="text" type="java.lang.String" value="VIEW"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnViewActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="viewbtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnAssignTo">
+    <Component class="javax.swing.JButton" name="ackbtn">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="0" type="rgb"/>
@@ -170,10 +170,10 @@
         <Property name="text" type="java.lang.String" value="Acknowledge"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAssignToActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ackbtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnComplete">
+    <Component class="javax.swing.JButton" name="combtn">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="0" type="rgb"/>
