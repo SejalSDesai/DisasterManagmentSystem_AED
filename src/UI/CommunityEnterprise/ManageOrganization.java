@@ -28,11 +28,11 @@ public class ManageOrganization extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.orgdirectory=orgdirectory;
-        populateTbl();
-        populateCmb();
+        tablePopulate();
+        comboboxPopulate();
 
     }
-    private void populateTbl(){
+    private void tablePopulate(){
         
         DefaultTableModel model = (DefaultTableModel) tblOrg.getModel();
         
@@ -48,7 +48,7 @@ public class ManageOrganization extends javax.swing.JPanel {
         }
     }
     //populate community tyeps organization in combo box
-    private void populateCmb(){
+    private void comboboxPopulate(){
         comboOrg.removeAllItems();
         comboOrg.addItem(Organization.Type.EventMaker);
         comboOrg.addItem(Organization.Type.Victim);
@@ -66,7 +66,7 @@ public class ManageOrganization extends javax.swing.JPanel {
         jPanel4 = new javax.swing.JPanel();
         btnAddOrganization = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        txtName = new javax.swing.JTextField();
+        nametxt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         comboOrg = new javax.swing.JComboBox();
         jPanel3 = new javax.swing.JPanel();
@@ -94,10 +94,10 @@ public class ManageOrganization extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel2.setText("Name");
 
-        txtName.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtName.addKeyListener(new java.awt.event.KeyAdapter() {
+        nametxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        nametxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtNameKeyTyped(evt);
+                nametxtKeyTyped(evt);
             }
         });
 
@@ -117,7 +117,7 @@ public class ManageOrganization extends javax.swing.JPanel {
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtName)
+                    .addComponent(nametxt)
                     .addComponent(comboOrg, 0, 245, Short.MAX_VALUE))
                 .addGap(40, 40, 40))
             .addGroup(jPanel4Layout.createSequentialGroup()
@@ -135,7 +135,7 @@ public class ManageOrganization extends javax.swing.JPanel {
                 .addGap(50, 50, 50)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50)
                 .addComponent(btnAddOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42))
@@ -161,7 +161,7 @@ public class ManageOrganization extends javax.swing.JPanel {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 13, Short.MAX_VALUE)
                 .addComponent(jLabel1))
         );
 
@@ -200,26 +200,26 @@ public class ManageOrganization extends javax.swing.JPanel {
 
     private void btnAddOrganizationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddOrganizationActionPerformed
         // TODO add your handling code here:
-        if(txtName.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null,"Please fill the empty fields");
+        if(nametxt.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null,"FIELD CANNOT BE EMPTY");
         }else{
             Organization.Type type=(Organization.Type) comboOrg.getSelectedItem();
-            orgdirectory.createOrganization(type,txtName.getText());
-            populateTbl();
+            orgdirectory.createOrganization(type,nametxt.getText());
+            tablePopulate();
         }
     }//GEN-LAST:event_btnAddOrganizationActionPerformed
 
-    private void txtNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameKeyTyped
+    private void nametxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nametxtKeyTyped
         // TODO add your handling code here:
         char typedName = evt.getKeyChar();
         if(!Character.isAlphabetic(typedName) && !Character.isWhitespace(typedName)){
             evt.consume();
         }
         //Restrict the length to 256
-        if(txtName.getText().length() > 255){
+        if(nametxt.getText().length() > 205){
             evt.consume();
         }
-    }//GEN-LAST:event_txtNameKeyTyped
+    }//GEN-LAST:event_nametxtKeyTyped
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -239,7 +239,7 @@ public class ManageOrganization extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField nametxt;
     private javax.swing.JTable tblOrg;
-    private javax.swing.JTextField txtName;
     // End of variables declaration//GEN-END:variables
 }

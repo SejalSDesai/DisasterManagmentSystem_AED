@@ -78,7 +78,7 @@ public class ManageEmployee extends javax.swing.JPanel {
         jPanel4 = new javax.swing.JPanel();
         btnAddEmployee = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        txtName = new javax.swing.JTextField();
+        nametxt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         comboOrgSelect = new javax.swing.JComboBox();
         jButton1 = new javax.swing.JButton();
@@ -169,10 +169,10 @@ public class ManageEmployee extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel2.setText("Name");
 
-        txtName.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtName.addKeyListener(new java.awt.event.KeyAdapter() {
+        nametxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        nametxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtNameKeyTyped(evt);
+                nametxtKeyTyped(evt);
             }
         });
 
@@ -192,7 +192,7 @@ public class ManageEmployee extends javax.swing.JPanel {
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(comboOrgSelect, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(51, 51, 51))
             .addGroup(jPanel4Layout.createSequentialGroup()
@@ -210,7 +210,7 @@ public class ManageEmployee extends javax.swing.JPanel {
                 .addGap(64, 64, 64)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(53, 53, 53)
                 .addComponent(btnAddEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(51, Short.MAX_VALUE))
@@ -237,31 +237,31 @@ public class ManageEmployee extends javax.swing.JPanel {
 
     private void btnAddEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddEmployeeActionPerformed
         // TODO add your handling code here:
-        if(txtName.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null,"Please fill the Empty fields");
+        if(nametxt.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null,"FIELD CANNOT BE EMPTY");
         }else{
 
             Organization organization =(Organization)comboOrgSelect.getSelectedItem();
-            String name = txtName.getText();
+            String name = nametxt.getText();
 
             organization.getEmployeeDirectory().createEmployee(name);
             populateTbl(organization);
 
-            txtName.setText("");
+            nametxt.setText("");
         }
     }//GEN-LAST:event_btnAddEmployeeActionPerformed
 
-    private void txtNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameKeyTyped
+    private void nametxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nametxtKeyTyped
         // TODO add your handling code here:
         char typedName = evt.getKeyChar();
         if(!Character.isAlphabetic(typedName) && !Character.isWhitespace(typedName)){
             evt.consume();
         }
         //Restrict the length to 256
-        if(txtName.getText().length() > 255){
+        if(nametxt.getText().length() > 255){
             evt.consume();
         }
-    }//GEN-LAST:event_txtNameKeyTyped
+    }//GEN-LAST:event_nametxtKeyTyped
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -283,7 +283,7 @@ public class ManageEmployee extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField nametxt;
     private javax.swing.JTable tblEmp;
-    private javax.swing.JTextField txtName;
     // End of variables declaration//GEN-END:variables
 }

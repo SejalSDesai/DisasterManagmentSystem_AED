@@ -4,9 +4,10 @@
  */
 package UI.EventMaker;
 import Business.Ecosystem;
-import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
+import Business.Enterprise.Enterprise;
+
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
@@ -47,8 +48,8 @@ public class EventMakerAdminWorkArea extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        btnManageEmployee = new javax.swing.JButton();
-        btnManageUserAccount = new javax.swing.JButton();
+        embtn = new javax.swing.JButton();
+        emuser = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
@@ -79,23 +80,23 @@ public class EventMakerAdminWorkArea extends javax.swing.JPanel {
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Manage", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 18))); // NOI18N
         jPanel3.setOpaque(false);
 
-        btnManageEmployee.setBackground(new java.awt.Color(102, 102, 102));
-        btnManageEmployee.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnManageEmployee.setForeground(new java.awt.Color(255, 255, 255));
-        btnManageEmployee.setText(" Employee");
-        btnManageEmployee.addActionListener(new java.awt.event.ActionListener() {
+        embtn.setBackground(new java.awt.Color(102, 102, 102));
+        embtn.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        embtn.setForeground(new java.awt.Color(255, 255, 255));
+        embtn.setText(" Employee");
+        embtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageEmployeeActionPerformed(evt);
+                embtnActionPerformed(evt);
             }
         });
 
-        btnManageUserAccount.setBackground(new java.awt.Color(102, 102, 102));
-        btnManageUserAccount.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnManageUserAccount.setForeground(new java.awt.Color(255, 255, 255));
-        btnManageUserAccount.setText(" User Account");
-        btnManageUserAccount.addActionListener(new java.awt.event.ActionListener() {
+        emuser.setBackground(new java.awt.Color(102, 102, 102));
+        emuser.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        emuser.setForeground(new java.awt.Color(255, 255, 255));
+        emuser.setText(" User Account");
+        emuser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageUserAccountActionPerformed(evt);
+                emuserActionPerformed(evt);
             }
         });
 
@@ -110,8 +111,8 @@ public class EventMakerAdminWorkArea extends javax.swing.JPanel {
                     .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(37, 37, 37)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnManageEmployee, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnManageUserAccount, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(embtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(emuser, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(84, 84, 84))
         );
         jPanel3Layout.setVerticalGroup(
@@ -119,11 +120,11 @@ public class EventMakerAdminWorkArea extends javax.swing.JPanel {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnManageEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(embtn, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(51, 51, 51)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnManageUserAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(emuser, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(46, Short.MAX_VALUE))
         );
@@ -178,28 +179,28 @@ public class EventMakerAdminWorkArea extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnManageEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageEmployeeActionPerformed
+    private void embtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_embtnActionPerformed
         // TODO add your handling code here:
         ManageEmployee manageEmployeeJPanel = new ManageEmployee(userProcessContainer, enterprise.getOrganization_directory());
         userProcessContainer.add("MakerManageEmployee", manageEmployeeJPanel);
 
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnManageEmployeeActionPerformed
+    }//GEN-LAST:event_embtnActionPerformed
 
-    private void btnManageUserAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageUserAccountActionPerformed
+    private void emuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emuserActionPerformed
         // TODO add your handling code here:
         ManageUserAccount muajp = new ManageUserAccount(userProcessContainer, enterprise);
         userProcessContainer.add("MakerManageUserAccount", muajp);
 
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnManageUserAccountActionPerformed
+    }//GEN-LAST:event_emuserActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnManageEmployee;
-    private javax.swing.JButton btnManageUserAccount;
+    private javax.swing.JButton embtn;
+    private javax.swing.JButton emuser;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

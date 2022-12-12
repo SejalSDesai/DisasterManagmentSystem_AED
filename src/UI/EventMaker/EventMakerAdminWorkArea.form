@@ -144,8 +144,8 @@
                       </Group>
                       <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnManageEmployee" alignment="1" min="-2" pref="350" max="-2" attributes="0"/>
-                          <Component id="btnManageUserAccount" alignment="1" min="-2" pref="350" max="-2" attributes="0"/>
+                          <Component id="embtn" alignment="1" min="-2" pref="350" max="-2" attributes="0"/>
+                          <Component id="emuser" alignment="1" min="-2" pref="350" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
                   </Group>
@@ -156,12 +156,12 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnManageEmployee" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="embtn" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
                           <Component id="jLabel3" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnManageUserAccount" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="emuser" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
                           <Component id="jLabel4" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="46" max="32767" attributes="0"/>
@@ -172,7 +172,7 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel3">
             </Component>
-            <Component class="javax.swing.JButton" name="btnManageEmployee">
+            <Component class="javax.swing.JButton" name="embtn">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="66" green="66" red="66" type="rgb"/>
@@ -186,10 +186,10 @@
                 <Property name="text" type="java.lang.String" value=" Employee"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageEmployeeActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="embtnActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="btnManageUserAccount">
+            <Component class="javax.swing.JButton" name="emuser">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="66" green="66" red="66" type="rgb"/>
@@ -203,7 +203,7 @@
                 <Property name="text" type="java.lang.String" value=" User Account"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageUserAccountActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="emuserActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">

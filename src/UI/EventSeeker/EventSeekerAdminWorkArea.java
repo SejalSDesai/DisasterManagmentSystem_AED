@@ -20,7 +20,7 @@ public class EventSeekerAdminWorkArea extends javax.swing.JPanel {
      private JPanel userProcessContainer;
     private Enterprise enterprise;
     
-    public EventSeekerAdminWorkArea() {
+    public EventSeekerAdminWorkArea(JPanel userProcessContainer,Enterprise enterprise) {
         initComponents();
         this.enterprise=enterprise;
         this.userProcessContainer=userProcessContainer;
